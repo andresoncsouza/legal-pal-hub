@@ -6,8 +6,9 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { to: "/", label: "Início" },
   { to: "/sobre", label: "Sobre" },
-  { to: "/conteudo", label: "Conteúdo Jurídico" },
-  { to: "/faq", label: "FAQ" },
+  { to: "/atuacao", label: "Áreas de atuação" },
+  { to: "/conteudo", label: "Conteúdos" },
+  { to: "/faq", label: "Dúvidas" },
 ];
 
 export function SiteHeader() {
@@ -17,15 +18,15 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container-tight flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded border border-gold/40 bg-ink-light text-gold">
+          <div className="flex h-10 w-10 items-center justify-center rounded border border-gold/40 bg-primary/20 text-gold">
             <Scale className="h-5 w-5" />
           </div>
-          <div className="flex flex-col">
-            <span className="font-display text-lg font-bold leading-none tracking-tight text-gold-light group-hover:text-gold transition-colors">
-              Costa & Associados
+          <div className="flex flex-col border-b border-gold/40 pb-0.5">
+            <span className="font-display text-lg font-bold leading-none tracking-tight text-white group-hover:text-gold transition-colors">
+              ANDRESON COSTA
             </span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mt-0.5">
-              Advocacia
+            <span className="text-[10px] uppercase tracking-[0.2em] text-gold mt-0.5">
+              ADVOCACIA
             </span>
           </div>
         </Link>
@@ -43,9 +44,9 @@ export function SiteHeader() {
           ))}
           <Link
             to="/contato"
-            className="inline-flex items-center justify-center rounded border border-gold/40 bg-transparent px-4 py-2 text-sm font-medium text-gold transition-colors hover:bg-gold hover:text-ink"
+            className="inline-flex items-center justify-center rounded bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary/80"
           >
-            Consulta
+            AGENDAR ATENDIMENTO
           </Link>
         </nav>
 
@@ -75,9 +76,9 @@ export function SiteHeader() {
             <Link
               to="/contato"
               onClick={() => setIsOpen(false)}
-              className="inline-flex items-center justify-center rounded border border-gold/40 bg-transparent px-4 py-3 text-sm font-medium text-gold transition-colors hover:bg-gold hover:text-ink"
+              className="inline-flex items-center justify-center rounded bg-primary px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/80"
             >
-              Agendar consulta
+              AGENDAR ATENDIMENTO
             </Link>
           </nav>
         </div>

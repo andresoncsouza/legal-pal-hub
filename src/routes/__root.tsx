@@ -77,18 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Costa & Associados Advocacia" },
+      { title: "Andreson Costa Advocacia" },
       {
         name: "description",
         content:
-          "Costa & Associados: escritório de advocacia com tradição, ética e excelência técnica. Atuação em Direito Civil, Empresarial, Trabalhista, Penal e mais.",
+          "Andreson Costa: escritório de advocacia e consultoria jurídica com ética e excelência técnica. Atuação em diversas áreas do Direito.",
       },
-      { name: "author", content: "Costa & Associados" },
-      { property: "og:title", content: "Costa & Associados Advocacia" },
+      { name: "author", content: "Andreson Costa" },
+      { property: "og:title", content: "Andreson Costa Advocacia" },
       {
         property: "og:description",
         content:
-          "Costa & Associados: escritório de advocacia com tradição, ética e excelência técnica. Atuação em Direito Civil, Empresarial, Trabalhista, Penal e mais.",
+          "Andreson Costa: escritório de advocacia e consultoria jurídica com ética e excelência técnica. Atuação em diversas áreas do Direito.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -8,17 +8,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Costa & Associados | Advocacia de Excelência" },
+      { title: "Andreson Costa | Advocacia e Consultoria Jurídica" },
       {
         name: "description",
         content:
-          "Escritório de advocacia com tradição e excelência jurídica. Atuação estratégica em direito civil, empresarial, trabalhista e penal.",
+          "Escritório de advocacia de Andreson Costa. Atuação estratégica em direito civil, empresarial, trabalhista e penal.",
       },
-      { property: "og:title", content: "Costa & Associados | Advocacia de Excelência" },
+      { property: "og:title", content: "Andreson Costa | Advocacia e Consultoria Jurídica" },
       {
         property: "og:description",
         content:
-          "Escritório de advocacia com tradição e excelência jurídica. Atuação estratégica em direito civil, empresarial, trabalhista e penal.",
+          "Escritório de advocacia de Andreson Costa. Atuação estratégica em direito civil, empresarial, trabalhista e penal.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
