@@ -38,7 +38,7 @@ function Index() {
               <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-gold" />
                 <span className="text-xs font-medium uppercase tracking-wider text-gold">
-                  Tradição jurídica desde 1998
+                  Excelência jurídica e estratégica
                 </span>
               </div>
               <h1 className="font-display text-4xl font-bold leading-tight text-gold-light sm:text-5xl md:text-6xl">
@@ -50,8 +50,8 @@ function Index() {
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link to="/contato">
-                  <Button size="lg" className="w-full sm:w-auto">
-                    Agendar consulta
+                  <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/80 text-white">
+                    AGENDAR ATENDIMENTO
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </Link>
