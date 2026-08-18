@@ -8,17 +8,17 @@ export const Route = createFileRoute("/contato")({
   component: ContatoPage,
   head: () => ({
     meta: [
-      { title: "Contato | Costa & Associados Advocacia" },
+      { title: "Contato | Andreson Costa Advocacia" },
       {
         name: "description",
         content:
-          "Entre em contato com o Costa & Associados. Agende sua consulta e fale com um advogado especializado.",
+          "Entre em contato com Andreson Costa. Agende seu atendimento e fale com um especialista.",
       },
-      { property: "og:title", content: "Contato | Costa & Associados Advocacia" },
+      { property: "og:title", content: "Contato | Andreson Costa Advocacia" },
       {
         property: "og:description",
         content:
-          "Entre em contato com o Costa & Associados. Agende sua consulta e fale com um advogado especializado.",
+          "Entre em contato com Andreson Costa. Agende seu atendimento e fale com um especialista.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -85,7 +85,7 @@ function ContatoPage() {
                       E-mail
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      contato@costaeadvogados.com.br
+                      contato@andresoncosta.adv.br
                     </p>
                   </div>
                 </div>
@@ -168,7 +168,7 @@ function ContatoPage() {
                   placeholder="Descreva brevemente sua demanda"
                 />
               </div>
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/80 text-white">
                 Enviar mensagem
               </Button>
             </form>

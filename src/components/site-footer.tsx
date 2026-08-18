@@ -8,21 +8,21 @@ export function SiteFooter() {
         <div className="grid gap-12 md:grid-cols-3">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded border border-gold/40 bg-ink text-gold">
+              <div className="flex h-10 w-10 items-center justify-center rounded border border-gold/40 bg-primary/20 text-gold">
                 <Scale className="h-5 w-5" />
               </div>
-              <div className="flex flex-col">
-                <span className="font-display text-lg font-bold leading-none tracking-tight text-gold-light">
-                  Costa & Associados
+              <div className="flex flex-col border-b border-gold/40 pb-0.5">
+                <span className="font-display text-lg font-bold leading-none tracking-tight text-white">
+                  ANDRESON COSTA
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mt-0.5">
-                  Advocacia
+                <span className="text-[10px] uppercase tracking-[0.2em] text-gold mt-0.5">
+                  ADVOCACIA
                 </span>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Excelência jurídica com tradição e compromisso. Atuamos com
-              ética, estratégia e dedicação para proteger seus interesses.
+              Excelência jurídica e consultoria estratégica. Atuamos com
+              ética, transparência e dedicação para proteger seus interesses.
             </p>
           </div>
 
@@ -49,10 +49,18 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
+                  to="/atuacao"
+                  className="text-sm text-muted-foreground transition-colors hover:text-gold-light"
+                >
+                  Áreas de atuação
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/conteudo"
                   className="text-sm text-muted-foreground transition-colors hover:text-gold-light"
                 >
-                  Conteúdo Jurídico
+                  Conteúdos
                 </Link>
               </li>
               <li>
@@ -60,7 +68,7 @@ export function SiteFooter() {
                   to="/faq"
                   className="text-sm text-muted-foreground transition-colors hover:text-gold-light"
                 >
-                  Perguntas Frequentes
+                  Dúvidas
                 </Link>
               </li>
             </ul>
@@ -85,7 +93,7 @@ export function SiteFooter() {
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 shrink-0 text-gold" />
-                <span>contato@costaeadvogados.com.br</span>
+                <span>contato@andresoncorta.adv.br</span>
               </li>
             </ul>
           </div>
@@ -93,7 +101,7 @@ export function SiteFooter() {
 
         <div className="mt-12 border-t border-border pt-8 text-center">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Costa & Associados Advocacia. Todos os
+            © {new Date().getFullYear()} Andreson Costa Advocacia. Todos os
             direitos reservados.
           </p>
         </div>

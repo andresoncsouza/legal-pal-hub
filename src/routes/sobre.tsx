@@ -7,17 +7,17 @@ export const Route = createFileRoute("/sobre")({
   component: SobrePage,
   head: () => ({
     meta: [
-      { title: "Sobre | Costa & Associados Advocacia" },
+      { title: "Sobre | Andreson Costa Advocacia" },
       {
         name: "description",
         content:
-          "Conheça a história, valores e equipe do Costa & Associados. Mais de 25 anos de tradição e excelência no exercício da advocacia.",
+          "Conheça a história e os valores de Andreson Costa. Excelência e ética no exercício da advocacia e consultoria jurídica.",
       },
-      { property: "og:title", content: "Sobre | Costa & Associados Advocacia" },
+      { property: "og:title", content: "Sobre | Andreson Costa Advocacia" },
       {
         property: "og:description",
         content:
-          "Conheça a história, valores e equipe do Costa & Associados. Mais de 25 anos de tradição e excelência no exercício da advocacia.",
+          "Conheça a história e os valores de Andreson Costa. Excelência e ética no exercício da advocacia e consultoria jurídica.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -36,7 +36,7 @@ function SobrePage() {
               Sobre o escritório
             </span>
             <h1 className="mx-auto mt-3 max-w-3xl font-display text-4xl font-bold text-gold-light sm:text-5xl">
-              Tradição, ética e compromisso com justiça
+              Excelência, ética e compromisso com o cliente
             </h1>
           </div>
         </section>
@@ -44,9 +44,9 @@ function SobrePage() {
         <section className="container-tight section-padding">
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-relaxed text-muted-foreground">
             <p>
-              Fundado em 1998, o <strong className="text-gold-light">Costa & Associados</strong>{" "}
-              nasceu com o propósito de oferecer advocacia de alta performance, pautada em
-              valores sólidos: ética, transparência, comprometimento e excelência técnica.
+              O escritório de <strong className="text-gold-light">Andreson Costa</strong>{" "}
+              nasceu com o propósito de oferecer advocacia e consultoria jurídica de alta performance, pautada em
+              valores sólidos: ética, transparência e excelência técnica.
             </p>
             <p>
               Ao longo de mais de duas décadas, construímos uma trajetória reconhecida pelo
