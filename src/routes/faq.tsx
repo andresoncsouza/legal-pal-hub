@@ -12,17 +12,17 @@ export const Route = createFileRoute("/faq")({
   component: FaqPage,
   head: () => ({
     meta: [
-      { title: "Perguntas Frequentes | Costa & Associados" },
+      { title: "Dúvidas | Andreson Costa" },
       {
         name: "description",
         content:
-          "Respostas para as dúvidas mais comuns sobre nossos serviços de advocacia, consultoria e honorários.",
+          "Respostas para as dúvidas mais comuns sobre nossos serviços de advocacia e consultoria jurídica.",
       },
-      { property: "og:title", content: "Perguntas Frequentes | Costa & Associados" },
+      { property: "og:title", content: "Dúvidas | Andreson Costa" },
       {
         property: "og:description",
         content:
-          "Respostas para as dúvidas mais comuns sobre nossos serviços de advocacia, consultoria e honorários.",
+          "Respostas para as dúvidas mais comuns sobre nossos serviços de advocacia e consultoria jurídica.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
