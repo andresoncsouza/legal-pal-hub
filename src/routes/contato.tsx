@@ -73,7 +73,7 @@ function ContatoPage() {
                     <h3 className="font-display text-lg font-semibold text-gold-light">
                       Telefone
                     </h3>
-                    <p className="mt-1 text-sm text-muted-foreground">(41) 99197-9594</p>
+                    <p className="mt-1 text-sm text-muted-foreground">(11) 3456-7890</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
