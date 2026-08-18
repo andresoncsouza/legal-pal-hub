@@ -168,13 +168,6 @@
 }
 
 @utility section-padding {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-@media (min-width: 768px) {
-  @utility section-padding {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
+  padding-top: clamp(4rem, 6vw, 7rem);
+  padding-bottom: clamp(4rem, 6vw, 7rem);
 }
