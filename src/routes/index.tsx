@@ -67,9 +67,9 @@ function Index() {
             alt="Fachada de edifício corporativo ao anoitecer"
             width={1920}
             height={1280}
-            className="absolute inset-0 h-full w-full object-cover opacity-40"
+            className="absolute inset-0 h-full w-full object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/70 to-ink" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/60 to-ink" />
           <div className="container-tight relative py-24 text-center">
             <div className="mx-auto max-w-3xl space-y-8">
               <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-gold">
