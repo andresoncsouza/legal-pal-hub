@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AtuacaoRouteImport } from './routes/atuacao'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as ConteudoRouteImport } from './routes/conteudo'
 import { Route as FaqRouteImport } from './routes/faq'
@@ -18,6 +19,11 @@ import { Route as SobreRouteImport } from './routes/sobre'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtuacaoRoute = AtuacaoRouteImport.update({
+  id: '/atuacao',
+  path: '/atuacao',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContatoRoute = ContatoRouteImport.update({
@@ -43,6 +49,7 @@ const SobreRoute = SobreRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/atuacao': typeof AtuacaoRoute
   '/contato': typeof ContatoRoute
   '/conteudo': typeof ConteudoRoute
   '/faq': typeof FaqRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/atuacao': typeof AtuacaoRoute
   '/contato': typeof ContatoRoute
   '/conteudo': typeof ConteudoRoute
   '/faq': typeof FaqRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/atuacao': typeof AtuacaoRoute
   '/contato': typeof ContatoRoute
   '/conteudo': typeof ConteudoRoute
   '/faq': typeof FaqRoute
@@ -65,14 +74,16 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contato' | '/conteudo' | '/faq' | '/sobre'
+  fullPaths: '/' | '/atuacao' | '/contato' | '/conteudo' | '/faq' | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contato' | '/conteudo' | '/faq' | '/sobre'
-  id: '__root__' | '/' | '/contato' | '/conteudo' | '/faq' | '/sobre'
+  to: '/' | '/atuacao' | '/contato' | '/conteudo' | '/faq' | '/sobre'
+  id:
+    '__root__' | '/' | '/atuacao' | '/contato' | '/conteudo' | '/faq' | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AtuacaoRoute: typeof AtuacaoRoute
   ContatoRoute: typeof ContatoRoute
   ConteudoRoute: typeof ConteudoRoute
   FaqRoute: typeof FaqRoute
@@ -86,6 +97,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/atuacao': {
+      id: '/atuacao'
+      path: '/atuacao'
+      fullPath: '/atuacao'
+      preLoaderRoute: typeof AtuacaoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contato': {
@@ -121,6 +139,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AtuacaoRoute: AtuacaoRoute,
   ContatoRoute: ContatoRoute,
   ConteudoRoute: ConteudoRoute,
   FaqRoute: FaqRoute,
