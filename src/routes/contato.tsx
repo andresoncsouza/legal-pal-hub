@@ -1,0 +1,181 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { Button } from "@/components/ui/button";
+import { MapPin, Mail, Phone, Clock } from "lucide-react";
+
+export const Route = createFileRoute("/contato")({
+  component: ContatoPage,
+  head: () => ({
+    meta: [
+      { title: "Contato | Costa & Associados Advocacia" },
+      {
+        name: "description",
+        content:
+          "Entre em contato com o Costa & Associados. Agende sua consulta e fale com um advogado especializado.",
+      },
+      { property: "og:title", content: "Contato | Costa & Associados Advocacia" },
+      {
+        property: "og:description",
+        content:
+          "Entre em contato com o Costa & Associados. Agende sua consulta e fale com um advogado especializado.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+});
+
+function ContatoPage() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <SiteHeader />
+      <main className="flex-1">
+        <section className="border-b border-border">
+          <div className="container-tight section-padding text-center">
+            <span className="text-xs font-semibold uppercase tracking-wider text-gold">
+              Contato
+            </span>
+            <h1 className="mx-auto mt-3 max-w-3xl font-display text-4xl font-bold text-gold-light sm:text-5xl">
+              Fale com nossa equipe
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+              Preencha o formulário ou utilize um de nossos canais de atendimento. Retornaremos
+              o mais breve possível.
+            </p>
+          </div>
+        </section>
+
+        <section className="container-tight section-padding">
+          <div className="grid gap-12 lg:grid-cols-2">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded border border-gold/30 bg-gold/5 text-gold">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg font-semibold text-gold-light">
+                      Endereço
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      Av. Paulista, 1000, 18º andar
+                      <br />
+                      Bela Vista, São Paulo — SP, 01310-100
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded border border-gold/30 bg-gold/5 text-gold">
+                    <Phone className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg font-semibold text-gold-light">
+                      Telefone
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground">(11) 3456-7890</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded border border-gold/30 bg-gold/5 text-gold">
+                    <Mail className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg font-semibold text-gold-light">
+                      E-mail
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      contato@costaeadvogados.com.br
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded border border-gold/30 bg-gold/5 text-gold">
+                    <Clock className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg font-semibold text-gold-light">
+                      Horário de atendimento
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      Segunda a sexta, das 9h às 18h
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <form className="space-y-6 rounded border border-border bg-card p-6 md:p-8">
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <label htmlFor="name" className="text-sm font-medium text-gold-light">
+                    Nome completo
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    className="w-full rounded border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                    placeholder="Seu nome"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="email" className="text-sm font-medium text-gold-light">
+                    E-mail
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    className="w-full rounded border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                    placeholder="seu@email.com"
+                  />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="phone" className="text-sm font-medium text-gold-light">
+                  Telefone
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  className="w-full rounded border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                  placeholder="(11) 99999-9999"
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="subject" className="text-sm font-medium text-gold-light">
+                  Assunto
+                </label>
+                <select
+                  id="subject"
+                  className="w-full rounded border border-input bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                >
+                  <option value="">Selecione uma área</option>
+                  <option value="civil">Direito Civil</option>
+                  <option value="empresarial">Direito Empresarial</option>
+                  <option value="trabalhista">Direito Trabalhista</option>
+                  <option value="penal">Direito Penal</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-sm font-medium text-gold-light">
+                  Mensagem
+                </label>
+                <textarea
+                  id="message"
+                  rows={5}
+                  className="w-full rounded border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                  placeholder="Descreva brevemente sua demanda"
+                />
+              </div>
+              <Button type="submit" className="w-full">
+                Enviar mensagem
+              </Button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
+    </div>
+  );
+}
