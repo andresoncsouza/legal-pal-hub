@@ -26,7 +26,7 @@ export function SiteHeader() {
               ANDRESON COSTA
             </span>
             <span className="text-[10px] uppercase tracking-[0.2em] text-gold mt-0.5">
-              ADVOCACIA
+              ADVOCACIA E CONSULTORIA JURÍDICA
             </span>
           </div>
         </Link>
