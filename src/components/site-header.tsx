@@ -22,7 +22,7 @@ export function SiteHeader() {
           </div>
           <div className="flex flex-col">
             <span className="font-display text-lg font-bold leading-none tracking-tight text-gold-light group-hover:text-gold transition-colors">
-              Costa & Associados
+              Andreson Costa & Associados
             </span>
             <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mt-0.5">
               Advocacia
