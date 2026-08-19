@@ -1,84 +1,93 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { Menu, X, Scale } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { navLinks } from "@/data/content";
+import { Logo } from "@/components/logo";
+import { buttonStyles } from "@/components/actions";
 
-const navLinks = [
-  { to: "/", label: "Início" },
-  { to: "/sobre", label: "Sobre" },
-  { to: "/atuacao", label: "Áreas de atuação" },
-  { to: "/conteudo", label: "Conteúdos" },
-  { to: "/faq", label: "Dúvidas" },
-];
+/** overlay: header transparente sobre o hero, ganhando fundo sólido ao rolar. */
+export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
-export function SiteHeader() {
-  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const transparent = overlay && !scrolled && !open;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container-tight flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded border border-gold/40 bg-primary/20 text-gold">
-            <Scale className="h-5 w-5" />
-          </div>
-          <div className="flex flex-col border-b border-gold/40 pb-0.5">
-            <span className="font-display text-lg font-bold leading-none tracking-tight text-white group-hover:text-gold transition-colors">
-              ANDRESON COSTA
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-gold mt-0.5">
-              ADVOCACIA E CONSULTORIA JURÍDICA
-            </span>
-          </div>
-        </Link>
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+        transparent
+          ? "bg-transparent"
+          : "border-b border-border/70 bg-white/95 backdrop-blur-md",
+      )}
+    >
+      <div className="container-page flex h-20 items-center justify-between gap-6">
+        <Logo light={transparent} />
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Navegação principal" className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              activeProps={{ className: "text-gold" }}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-gold-light"
+              activeProps={{ className: "!text-gold" }}
+              className={cn(
+                "eyebrow text-[0.65rem] transition-colors",
+                transparent ? "text-white/80 hover:text-gold" : "text-grey hover:text-navy",
+              )}
             >
               {link.label}
             </Link>
           ))}
           <Link
             to="/contato"
-            className="inline-flex items-center justify-center rounded bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary/80"
+            className={transparent ? buttonStyles.outlineLight : buttonStyles.solid}
           >
-            AGENDAR ATENDIMENTO
+            Agendar atendimento
           </Link>
         </nav>
 
         <button
           type="button"
-          onClick={() => setIsOpen(!isOpen)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded border border-border bg-transparent text-foreground md:hidden"
-          aria-label="Abrir menu"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          className={cn(
+            "inline-flex h-11 w-11 items-center justify-center border transition-colors lg:hidden",
+            transparent ? "border-white/30 text-white" : "border-border text-navy",
+          )}
         >
-          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
-      {isOpen && (
-        <div className="border-t border-border md:hidden">
-          <nav className="container-tight flex flex-col gap-4 py-6">
+      {open && (
+        <div className="border-t border-border bg-white lg:hidden">
+          <nav aria-label="Navegação mobile" className="container-page flex flex-col py-4">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                onClick={() => setIsOpen(false)}
-                className="text-base font-medium text-muted-foreground transition-colors hover:text-gold-light"
+                onClick={() => setOpen(false)}
+                activeProps={{ className: "!text-gold" }}
+                className="eyebrow border-b border-border/60 py-4 text-[0.7rem] text-navy"
               >
                 {link.label}
               </Link>
             ))}
             <Link
               to="/contato"
-              onClick={() => setIsOpen(false)}
-              className="inline-flex items-center justify-center rounded bg-primary px-4 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/80"
+              onClick={() => setOpen(false)}
+              className={cn(buttonStyles.solid, "mt-6 mb-2 w-full")}
             >
-              AGENDAR ATENDIMENTO
+              Agendar atendimento
             </Link>
           </nav>
         </div>

@@ -1,109 +1,103 @@
 import { Link } from "@tanstack/react-router";
-import { Scale, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { navLinks } from "@/data/content";
+import { siteConfig, getWhatsappUrl } from "@/lib/site-config";
 
 export function SiteFooter() {
+  const whatsapp = getWhatsappUrl();
+
   return (
-    <footer className="border-t border-border bg-ink-light">
-      <div className="container-tight section-padding">
+    <footer className="bg-navy-dark text-white/70">
+      <div className="container-page section-y">
         <div className="grid gap-12 md:grid-cols-3">
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded border border-gold/40 bg-primary/20 text-gold">
-                <Scale className="h-5 w-5" />
-              </div>
-              <div className="flex flex-col border-b border-gold/40 pb-0.5">
-                <span className="font-display text-lg font-bold leading-none tracking-tight text-white">
-                  ANDRESON COSTA
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-gold mt-0.5">
-                  ADVOCACIA
-                </span>
-              </div>
-            </div>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              Excelência jurídica e consultoria estratégica. Atuamos com
-              ética, transparência e dedicação para proteger seus interesses.
+          <div>
+            <p className="font-display text-lg tracking-[0.2em] text-white">ANDRESON COSTA</p>
+            <span className="mt-2 gold-rule" />
+            <p className="eyebrow mt-3 text-[0.6rem] text-white/60">Advocacia</p>
+            <p className="mt-6 text-sm">
+              {siteConfig.lawyer}
+              <br />
+              Advogado | {siteConfig.oab}
             </p>
           </div>
 
-          <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold">
-              Navegação
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/"
-                  className="text-sm text-muted-foreground transition-colors hover:text-gold-light"
-                >
-                  Início
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/sobre"
-                  className="text-sm text-muted-foreground transition-colors hover:text-gold-light"
-                >
-                  Sobre
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/atuacao"
-                  className="text-sm text-muted-foreground transition-colors hover:text-gold-light"
-                >
-                  Áreas de atuação
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/conteudo"
-                  className="text-sm text-muted-foreground transition-colors hover:text-gold-light"
-                >
-                  Conteúdos
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/faq"
-                  className="text-sm text-muted-foreground transition-colors hover:text-gold-light"
-                >
-                  Dúvidas
-                </Link>
-              </li>
+          <nav aria-label="Navegação do rodapé">
+            <h2 className="eyebrow text-[0.6rem] text-gold">Navegação</h2>
+            <ul className="mt-5 space-y-3">
+              {navLinks.map((link) => (
+                <li key={link.to}>
+                  <Link to={link.to} className="text-sm transition-colors hover:text-gold">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>
+          </nav>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold">
-              Contato
-            </h4>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-                <span>
-                  Av. Paulista, 1000, 18º andar
-                  <br />
-                  Bela Vista, São Paulo — SP
-                </span>
-              </li>
-              <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 shrink-0 text-gold" />
-                <span>(11) 3456-7890</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4 shrink-0 text-gold" />
-                <span>contato@andresoncorta.adv.br</span>
-              </li>
+            <h2 className="eyebrow text-[0.6rem] text-gold">Contato</h2>
+            <ul className="mt-5 space-y-3 text-sm">
+              <li>{siteConfig.email}</li>
+              <li>{siteConfig.city}</li>
+              <li>{siteConfig.hours.join(" — ")}</li>
             </ul>
+            <div className="mt-6 flex items-center gap-3">
+              <a
+                href={siteConfig.social.instagram}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Instagram"
+                className="inline-flex h-11 w-11 items-center justify-center border border-white/15 transition-colors hover:border-gold hover:text-gold"
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a
+                href={siteConfig.social.linkedin}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="LinkedIn"
+                className="inline-flex h-11 w-11 items-center justify-center border border-white/15 transition-colors hover:border-gold hover:text-gold"
+              >
+                <Linkedin className="h-4 w-4" />
+              </a>
+              {whatsapp ? (
+                <a
+                  href={whatsapp}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="WhatsApp"
+                  className="inline-flex h-11 w-11 items-center justify-center border border-white/15 transition-colors hover:border-gold hover:text-gold"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                </a>
+              ) : (
+                <Link
+                  to="/contato"
+                  aria-label="WhatsApp — via página de contato"
+                  className="inline-flex h-11 w-11 items-center justify-center border border-white/15 transition-colors hover:border-gold hover:text-gold"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                </Link>
+              )}
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-border pt-8 text-center">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Andreson Costa Advocacia. Todos os
-            direitos reservados.
-          </p>
+        <p className="mt-14 max-w-3xl border-t border-white/10 pt-8 text-xs leading-relaxed text-white/50">
+          As informações disponibilizadas neste site possuem caráter exclusivamente
+          informativo e não substituem orientação jurídica individualizada.
+        </p>
+
+        <div className="mt-8 flex flex-col gap-4 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 {siteConfig.lawyer}. Todos os direitos reservados.</p>
+          <div className="flex flex-wrap gap-6">
+            <Link to="/politica-de-privacidade" className="transition-colors hover:text-gold">
+              Política de Privacidade
+            </Link>
+            <Link to="/termos-de-uso" className="transition-colors hover:text-gold">
+              Termos de Uso
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
