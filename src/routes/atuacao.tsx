@@ -20,7 +20,7 @@ function Atuacao() {
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main className="flex-1 pt-20 pb-16 md:pb-0">
         <section className="container-page section-y">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <span className="text-xs font-semibold uppercase tracking-wider text-gold">

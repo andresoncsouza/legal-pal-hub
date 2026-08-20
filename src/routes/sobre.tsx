@@ -29,7 +29,7 @@ function SobrePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main className="flex-1 pt-20 pb-16 md:pb-0">
         <section className="border-b border-border">
           <div className="container-page section-y text-center">
             <span className="text-xs font-semibold uppercase tracking-wider text-gold">
