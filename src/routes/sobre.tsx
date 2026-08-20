@@ -31,20 +31,20 @@ function SobrePage() {
       <SiteHeader />
       <main className="flex-1">
         <section className="border-b border-border">
-          <div className="container-tight section-padding text-center">
+          <div className="container-page section-y text-center">
             <span className="text-xs font-semibold uppercase tracking-wider text-gold">
               Sobre o escritório
             </span>
-            <h1 className="mx-auto mt-3 max-w-3xl font-display text-4xl font-bold text-gold-light sm:text-5xl">
+            <h1 className="mx-auto mt-3 max-w-3xl font-display text-4xl font-bold text-navy sm:text-5xl">
               Excelência, ética e compromisso com o cliente
             </h1>
           </div>
         </section>
 
-        <section className="container-tight section-padding">
+        <section className="container-page section-y">
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-relaxed text-muted-foreground">
             <p>
-              O escritório de <strong className="text-gold-light">Andreson Costa</strong>{" "}
+              O escritório de <strong className="text-navy">Andreson Costa</strong>{" "}
               nasceu com o propósito de oferecer advocacia e consultoria jurídica de alta performance, pautada em
               valores sólidos: ética, transparência e excelência técnica.
             </p>
@@ -62,10 +62,10 @@ function SobrePage() {
           </div>
         </section>
 
-        <section className="border-y border-border bg-ink-light">
-          <div className="container-tight section-padding">
+        <section className="border-y border-border bg-offwhite">
+          <div className="container-page section-y">
             <div className="mx-auto mb-12 max-w-2xl text-center">
-              <h2 className="font-display text-3xl font-bold text-gold-light sm:text-4xl">
+              <h2 className="font-display text-3xl font-bold text-navy sm:text-4xl">
                 Nossos valores
               </h2>
             </div>
@@ -78,7 +78,7 @@ function SobrePage() {
                   <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded border border-gold/30 bg-gold/5 text-gold">
                     <value.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-gold-light">
+                  <h3 className="font-display text-lg font-semibold text-navy">
                     {value.title}
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground">{value.description}</p>
@@ -88,9 +88,9 @@ function SobrePage() {
           </div>
         </section>
 
-        <section className="container-tight section-padding">
+        <section className="container-page section-y">
           <div className="mx-auto mb-12 max-w-2xl text-center">
-            <h2 className="font-display text-3xl font-bold text-gold-light sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold text-navy sm:text-4xl">
               Equipe
             </h2>
             <p className="mt-4 text-muted-foreground">
@@ -104,7 +104,7 @@ function SobrePage() {
                 className="rounded border border-border bg-card p-6"
               >
                 <div className="mb-4 h-24 w-24 rounded-full bg-muted" />
-                <h3 className="font-display text-lg font-semibold text-gold-light">
+                <h3 className="font-display text-lg font-semibold text-navy">
                   {member.name}
                 </h3>
                 <p className="text-sm font-medium text-gold">{member.role}</p>
