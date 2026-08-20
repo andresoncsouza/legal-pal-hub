@@ -30,13 +30,13 @@ function ContatoPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main className="flex-1 pt-20 pb-16 md:pb-0">
         <section className="border-b border-border">
-          <div className="container-tight section-padding text-center">
+          <div className="container-page section-y text-center">
             <span className="text-xs font-semibold uppercase tracking-wider text-gold">
               Contato
             </span>
-            <h1 className="mx-auto mt-3 max-w-3xl font-display text-4xl font-bold text-gold-light sm:text-5xl">
+            <h1 className="mx-auto mt-3 max-w-3xl font-display text-4xl font-bold text-navy sm:text-5xl">
               Fale com nossa equipe
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
@@ -46,7 +46,7 @@ function ContatoPage() {
           </div>
         </section>
 
-        <section className="container-tight section-padding">
+        <section className="container-page section-y">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="space-y-8">
               <div className="space-y-6">
@@ -55,7 +55,7 @@ function ContatoPage() {
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-gold-light">
+                    <h3 className="font-display text-lg font-semibold text-navy">
                       Endereço
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
@@ -70,7 +70,7 @@ function ContatoPage() {
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-gold-light">
+                    <h3 className="font-display text-lg font-semibold text-navy">
                       Telefone
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">(11) 3456-7890</p>
@@ -81,7 +81,7 @@ function ContatoPage() {
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-gold-light">
+                    <h3 className="font-display text-lg font-semibold text-navy">
                       E-mail
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
@@ -94,7 +94,7 @@ function ContatoPage() {
                     <Clock className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-gold-light">
+                    <h3 className="font-display text-lg font-semibold text-navy">
                       Horário de atendimento
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
@@ -108,7 +108,7 @@ function ContatoPage() {
             <form className="space-y-6 rounded border border-border bg-card p-6 md:p-8">
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-gold-light">
+                  <label htmlFor="name" className="text-sm font-medium text-navy">
                     Nome completo
                   </label>
                   <input
@@ -119,7 +119,7 @@ function ContatoPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-gold-light">
+                  <label htmlFor="email" className="text-sm font-medium text-navy">
                     E-mail
                   </label>
                   <input
@@ -131,7 +131,7 @@ function ContatoPage() {
                 </div>
               </div>
               <div className="space-y-2">
-                <label htmlFor="phone" className="text-sm font-medium text-gold-light">
+                <label htmlFor="phone" className="text-sm font-medium text-navy">
                   Telefone
                 </label>
                 <input
@@ -142,7 +142,7 @@ function ContatoPage() {
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-medium text-gold-light">
+                <label htmlFor="subject" className="text-sm font-medium text-navy">
                   Assunto
                 </label>
                 <select
@@ -158,7 +158,7 @@ function ContatoPage() {
                 </select>
               </div>
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-gold-light">
+                <label htmlFor="message" className="text-sm font-medium text-navy">
                   Mensagem
                 </label>
                 <textarea

@@ -30,10 +30,10 @@ function Index() {
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
-      <main className="flex-1">
+      <main className="flex-1 pt-20 pb-16 md:pb-0">
         {/* Hero */}
         <section className="relative overflow-hidden border-b border-border">
-          <div className="container-tight section-padding text-center">
+          <div className="container-page section-y text-center">
             <div className="mx-auto max-w-3xl space-y-8">
               <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-gold" />
@@ -41,7 +41,7 @@ function Index() {
                   Excelência jurídica e estratégica
                 </span>
               </div>
-              <h1 className="font-display text-4xl font-bold leading-tight text-gold-light sm:text-5xl md:text-6xl">
+              <h1 className="font-display text-4xl font-bold leading-tight text-navy sm:text-5xl md:text-6xl">
                 Defesa de seus direitos com estratégia e excelência
               </h1>
               <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
@@ -66,12 +66,12 @@ function Index() {
         </section>
 
         {/* Áreas de atuação */}
-        <section className="container-tight section-padding">
+        <section className="container-page section-y">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <span className="text-xs font-semibold uppercase tracking-wider text-gold">
               Áreas de atuação
             </span>
-            <h2 className="mt-3 font-display text-3xl font-bold text-gold-light sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl font-bold text-navy sm:text-4xl">
               Soluções jurídicas completas
             </h2>
             <p className="mt-4 text-muted-foreground">
@@ -88,7 +88,7 @@ function Index() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded border border-gold/30 bg-gold/5 text-gold">
                   <area.icon className="h-6 w-6" />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-gold-light">
+                <h3 className="font-display text-xl font-semibold text-navy">
                   {area.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -100,13 +100,13 @@ function Index() {
         </section>
 
         {/* Diferenciais */}
-        <section className="border-y border-border bg-ink-light">
-          <div className="container-tight section-padding">
+        <section className="border-y border-border bg-offwhite">
+          <div className="container-page section-y">
             <div className="mx-auto max-w-3xl text-center">
               <span className="text-xs font-semibold uppercase tracking-wider text-gold">
                 Por que nos escolher
               </span>
-              <h2 className="mt-3 font-display text-3xl font-bold text-gold-light sm:text-4xl">
+              <h2 className="mt-3 font-display text-3xl font-bold text-navy sm:text-4xl">
                 Compromisso com resultados
               </h2>
             </div>
@@ -116,7 +116,7 @@ function Index() {
                   <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-gold/30 bg-gold/5 text-gold">
                     <item.icon className="h-7 w-7" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-gold-light">
+                  <h3 className="font-display text-lg font-semibold text-navy">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -129,9 +129,9 @@ function Index() {
         </section>
 
         {/* CTA */}
-        <section className="container-tight section-padding">
+        <section className="container-page section-y">
           <div className="mx-auto max-w-3xl rounded border border-gold/30 bg-gold/5 p-8 text-center md:p-12">
-            <h2 className="font-display text-2xl font-bold text-gold-light sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-navy sm:text-3xl">
               Precisa de orientação jurídica?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
