@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { Scale, FileText, Users, Shield, BookOpen } from "lucide-react";
+import { Shield, Gavel, Landmark, Wallet } from "lucide-react";
 
 export const Route = createFileRoute("/atuacao")({
   component: Atuacao,
@@ -10,7 +10,7 @@ export const Route = createFileRoute("/atuacao")({
       { title: "Áreas de Atuação | Andreson Costa" },
       {
         name: "description",
-        content: "Conheça nossas especialidades jurídicas: Direito Civil, Empresarial, Trabalhista e mais.",
+        content: "Conheça nossas especialidades jurídicas: Direito Penal, Crimes Econômicos, Direito Tributário e Previdenciário.",
       },
     ],
   }),
@@ -30,10 +30,10 @@ function Atuacao() {
               Áreas de atuação
             </h1>
             <p className="mt-4 text-muted-foreground text-lg">
-              Oferecemos soluções jurídicas completas e estratégicas para nossos clientes.
+              Atuamos de forma estratégica e técnica nas principais áreas de interesse do cliente.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
             {areas.map((area) => (
               <div
                 key={area.title}
@@ -60,33 +60,23 @@ function Atuacao() {
 
 const areas = [
   {
-    title: "Direito Civil",
-    description: "Contratos, responsabilidade civil, direito das obrigações, família e sucessões.",
-    icon: FileText,
-  },
-  {
-    title: "Direito Empresarial",
-    description: "Sociedades, contratos empresariais, recuperação judicial, compliance e governança.",
-    icon: Users,
-  },
-  {
-    title: "Direito Trabalhista",
-    description: "Assessoria preventiva e contenciosa para empregados e empregadores.",
-    icon: Scale,
-  },
-  {
     title: "Direito Penal",
     description: "Defesa técnica em todas as instâncias, acompanhamento em delegacias e tribunais.",
     icon: Shield,
   },
   {
-    title: "Direito Administrativo",
-    description: "Licitações, contratos públicos, improbidade, servidores públicos e regulatório.",
-    icon: BookOpen,
+    title: "Crimes Econômicos",
+    description: "Atuação em fraudes, lavagem de capitais, crimes contra a ordem econômica e o mercado financeiro.",
+    icon: Gavel,
   },
   {
-    title: "Mediação e Arbitragem",
-    description: "Resolução alternativa de conflitos com foco em agilidade e confidencialidade.",
-    icon: Scale,
+    title: "Direito Tributário",
+    description: "Assessoria em questões fiscais, contencioso tributário, planejamento e defesa de direitos patrimoniais.",
+    icon: Landmark,
+  },
+  {
+    title: "Direito Previdenciário",
+    description: "Orientação em benefícios, aposentadorias, revisões e recursos junto ao INSS e à Justiça Federal.",
+    icon: Wallet,
   },
 ];

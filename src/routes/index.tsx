@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { ArrowRight, Scale, Shield, FileText, Users, BookOpen } from "lucide-react";
+import { ArrowRight, Shield, Gavel, Landmark, Wallet } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -12,13 +12,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Escritório de advocacia de Andreson Costa. Atuação estratégica em direito civil, empresarial, trabalhista e penal.",
+          "Escritório de advocacia de Andreson Costa. Atuação estratégica em direito penal, crimes econômicos, tributário e previdenciário.",
       },
       { property: "og:title", content: "Andreson Costa | Advocacia e Consultoria Jurídica" },
       {
         property: "og:description",
         content:
-          "Escritório de advocacia de Andreson Costa. Atuação estratégica em direito civil, empresarial, trabalhista e penal.",
+          "Escritório de advocacia de Andreson Costa. Atuação estratégica em direito penal, crimes econômicos, tributário e previdenciário.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -46,7 +46,8 @@ function Index() {
               </h1>
               <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
                 Atuamos com ética, compromisso e conhecimento técnico para oferecer
-                soluções jurídicas personalizadas a pessoas e empresas.
+                soluções jurídicas personalizadas em direito penal, crimes econômicos,
+                tributário e previdenciário.
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link to="/contato">
@@ -72,14 +73,14 @@ function Index() {
               Áreas de atuação
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold text-navy sm:text-4xl">
-              Soluções jurídicas completas
+              Soluções jurídicas especializadas
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Oferecemos assessoria e representação em diversas áreas do Direito,
+              Oferecemos assessoria e representação nas áreas em que atuamos,
               sempre com foco na melhor estratégia para cada cliente.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {areas.map((area) => (
               <div
                 key={area.title}
@@ -156,40 +157,28 @@ function Index() {
 
 const areas = [
   {
-    title: "Direito Civil",
-    description:
-      "Contratos, responsabilidade civil, direito das obrigações, família e sucessões.",
-    icon: FileText,
-  },
-  {
-    title: "Direito Empresarial",
-    description:
-      "Sociedades, contratos empresariais, recuperação judicial, compliance e governança.",
-    icon: Users,
-  },
-  {
-    title: "Direito Trabalhista",
-    description:
-      "Assessoria preventiva e contenciosa para empregados e empregadores.",
-    icon: Scale,
-  },
-  {
     title: "Direito Penal",
     description:
       "Defesa técnica em todas as instâncias, acompanhamento em delegacias e tribunais.",
     icon: Shield,
   },
   {
-    title: "Direito Administrativo",
+    title: "Crimes Econômicos",
     description:
-      "Licitações, contratos públicos, improbidade, servidores públicos e regulatório.",
-    icon: BookOpen,
+      "Fraudes, lavagem de capitais, crimes contra a ordem econômica e o mercado financeiro.",
+    icon: Gavel,
   },
   {
-    title: "Mediação e Arbitragem",
+    title: "Direito Tributário",
     description:
-      "Resolução alternativa de conflitos com foco em agilidade e confidencialidade.",
-    icon: Scale,
+      "Assessoria em questões fiscais, contencioso tributário e defesa de direitos patrimoniais.",
+    icon: Landmark,
+  },
+  {
+    title: "Direito Previdenciário",
+    description:
+      "Benefícios, aposentadorias, revisões e recursos junto ao INSS e à Justiça Federal.",
+    icon: Wallet,
   },
 ];
 
@@ -198,18 +187,18 @@ const differentials = [
     title: "Atendimento personalizado",
     description:
       "Cada caso é analisado com atenção individualizada para construir a melhor estratégia.",
-    icon: Users,
+    icon: Shield,
   },
   {
     title: "Transparência",
     description:
       "Comunicação clara e direta sobre prazos, custos e possibilidades de sucesso.",
-    icon: Shield,
+    icon: Gavel,
   },
   {
     title: "Excelência técnica",
     description:
       "Equipe atualizada e alinhada às constantes mudanças da legislação e jurisprudência.",
-    icon: Scale,
+    icon: Landmark,
   },
 ];
