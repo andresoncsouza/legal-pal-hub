@@ -103,7 +103,11 @@ function SobrePage() {
                 key={member.name}
                 className="rounded border border-border bg-card p-6"
               >
-                <div className="mb-4 h-24 w-24 rounded-full bg-muted" />
+                <img
+                  src={andresonCostaBioAsset.url}
+                  alt={member.name}
+                  className="mb-4 h-24 w-24 rounded-full object-cover object-top"
+                />
                 <h3 className="font-display text-lg font-semibold text-navy">
                   {member.name}
                 </h3>
