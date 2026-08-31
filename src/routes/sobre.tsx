@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Award, BookOpen, Scale, Users } from "lucide-react";
+import andresonCostaBioAsset from "@/assets/andreson-costa-bio.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre")({
   component: SobrePage,
@@ -102,7 +103,11 @@ function SobrePage() {
                 key={member.name}
                 className="rounded border border-border bg-card p-6"
               >
-                <div className="mb-4 h-24 w-24 rounded-full bg-muted" />
+                <img
+                  src={andresonCostaBioAsset.url}
+                  alt={member.name}
+                  className="mb-4 h-24 w-24 rounded-full object-cover object-top"
+                />
                 <h3 className="font-display text-lg font-semibold text-navy">
                   {member.name}
                 </h3>
