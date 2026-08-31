@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Award, BookOpen, Scale, Users } from "lucide-react";
+import andresonCostaBioAsset from "@/assets/andreson-costa-bio.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre")({
   component: SobrePage,
