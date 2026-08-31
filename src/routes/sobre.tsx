@@ -147,16 +147,6 @@ const team = [
   {
     name: "Dr. Andreson Costa",
     role: "Sócio fundador",
-    bio: "Advogado com 30 anos de experiência em Direito Civil e Empresarial. Mestre em Direito pela USP.",
-  },
-  {
-    name: "Dra. Marina Oliveira",
-    role: "Sócia",
-    bio: "Especialista em Direito Trabalhista e Previdenciário. Atua em causas de alta complexidade.",
-  },
-  {
-    name: "Dr. Rafael Mendes",
-    role: "Advogado",
-    bio: "Focado em Direito Penal e compliance corporativo. Experiência em tribunais superiores.",
+    bio: "Advogado atuante em Direito Civil e Empresarial, com atuação estratégica e técnica em demandas complexas.",
   },
 ];
