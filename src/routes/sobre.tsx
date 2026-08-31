@@ -90,10 +90,10 @@ function SobrePage() {
         <section className="container-page section-y">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <h2 className="font-display text-3xl font-bold text-navy sm:text-4xl">
-              Equipe
+              O Advogado
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Conheça os profissionais que compõem nosso corpo jurídico.
+              Conheça o profissional à frente do escritório.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
