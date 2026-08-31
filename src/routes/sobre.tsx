@@ -49,9 +49,8 @@ function SobrePage() {
               valores sólidos: ética, transparência e excelência técnica.
             </p>
             <p>
-              Ao longo de mais de duas décadas, construímos uma trajetória reconhecida pelo
-              mercado e pela sociedade, atuando em casos complexos nas mais diversas áreas do
-              Direito. Nossa equipe reúne profissionais experientes, com formação acadêmica de
+              Construímos uma trajetória reconhecida pelo mercado e pela sociedade, atuando em
+              casos complexos nas mais diversas áreas do Direito com formação acadêmica de
               excelência e visão estratégica.
             </p>
             <p>
@@ -91,10 +90,10 @@ function SobrePage() {
         <section className="container-page section-y">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <h2 className="font-display text-3xl font-bold text-navy sm:text-4xl">
-              Equipe
+              O Advogado
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Conheça os profissionais que compõem nosso corpo jurídico.
+              Conheça o profissional à frente do escritório.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -148,16 +147,6 @@ const team = [
   {
     name: "Dr. Andreson Costa",
     role: "Sócio fundador",
-    bio: "Advogado com 30 anos de experiência em Direito Civil e Empresarial. Mestre em Direito pela USP.",
-  },
-  {
-    name: "Dra. Marina Oliveira",
-    role: "Sócia",
-    bio: "Especialista em Direito Trabalhista e Previdenciário. Atua em causas de alta complexidade.",
-  },
-  {
-    name: "Dr. Rafael Mendes",
-    role: "Advogado",
-    bio: "Focado em Direito Penal e compliance corporativo. Experiência em tribunais superiores.",
+    bio: "Advogado atuante em Direito Civil e Empresarial, com atuação estratégica e técnica em demandas complexas.",
   },
 ];
