@@ -17,7 +17,7 @@ export const siteConfig = {
   whatsappMessage: "Olá! Gostaria de informações sobre atendimento jurídico.",
   social: {
     instagram: "https://www.instagram.com/",
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "https://www.linkedin.com/feed/",
   },
 };
 
