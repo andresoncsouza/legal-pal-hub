@@ -49,9 +49,8 @@ function SobrePage() {
               valores sólidos: ética, transparência e excelência técnica.
             </p>
             <p>
-              Ao longo de mais de duas décadas, construímos uma trajetória reconhecida pelo
-              mercado e pela sociedade, atuando em casos complexos nas mais diversas áreas do
-              Direito. Nossa equipe reúne profissionais experientes, com formação acadêmica de
+              Construímos uma trajetória reconhecida pelo mercado e pela sociedade, atuando em
+              casos complexos nas mais diversas áreas do Direito com formação acadêmica de
               excelência e visão estratégica.
             </p>
             <p>
