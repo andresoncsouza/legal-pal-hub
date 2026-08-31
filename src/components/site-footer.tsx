@@ -13,7 +13,7 @@ export function SiteFooter() {
           <div>
             <p className="font-display text-lg tracking-[0.2em] text-white">ANDRESON COSTA</p>
             <span className="mt-2 gold-rule" />
-            <p className="eyebrow mt-3 text-[0.6rem] text-white/60">Advocacia</p>
+            <p className="eyebrow mt-3 text-[0.6rem] text-white/60">ADVOCACIA E CONSULTORIA JURÍDICA</p>
             <p className="mt-6 text-sm">
               {siteConfig.lawyer}
               <br />

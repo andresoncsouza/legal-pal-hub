@@ -24,7 +24,7 @@ export function Logo({ light = false, className }: { light?: boolean; className?
             light ? "text-white/65" : "text-grey",
           )}
         >
-          Advocacia
+          ADVOCACIA E CONSULTORIA JURÍDICA
         </span>
       </span>
     </Link>
