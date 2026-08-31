@@ -1,45 +1,31 @@
 export const practiceAreas = [
   {
     number: "01",
-    slug: "direito-civil",
-    title: "Direito Civil",
+    slug: "direito-penal",
+    title: "Direito Penal",
     description:
-      "Atuação em questões relacionadas a contratos, obrigações, responsabilidade civil, indenizações e relações patrimoniais.",
+      "Defesa técnica em todas as instâncias, acompanhamento em delegacias e tribunais.",
   },
   {
     number: "02",
-    slug: "direito-de-familia",
-    title: "Direito de Família",
+    slug: "crimes-economicos",
+    title: "Crimes Econômicos",
     description:
-      "Orientação e atuação em divórcio, guarda, alimentos, regulamentação de convivência, partilha e demais questões familiares.",
+      "Atuação em fraudes, lavagem de capitais, crimes contra a ordem econômica e o mercado financeiro.",
   },
   {
     number: "03",
-    slug: "direito-do-consumidor",
-    title: "Direito do Consumidor",
+    slug: "direito-tributario",
+    title: "Direito Tributário",
     description:
-      "Atuação em conflitos envolvendo relações de consumo, contratos, cobranças, produtos e serviços.",
+      "Assessoria em questões fiscais, contencioso tributário e defesa de direitos patrimoniais.",
   },
   {
     number: "04",
-    slug: "direito-imobiliario",
-    title: "Direito Imobiliário",
+    slug: "direito-previdenciario",
+    title: "Direito Previdenciário",
     description:
-      "Assessoria em contratos, compra e venda, locação, questões possessórias e conflitos relacionados a imóveis.",
-  },
-  {
-    number: "05",
-    slug: "direito-trabalhista",
-    title: "Direito Trabalhista",
-    description:
-      "Orientação jurídica em questões relacionadas às relações de trabalho e direitos trabalhistas.",
-  },
-  {
-    number: "06",
-    slug: "direito-empresarial",
-    title: "Direito Empresarial",
-    description:
-      "Assessoria jurídica para empresas e empreendedores em questões contratuais e empresariais.",
+      "Orientação em benefícios, aposentadorias, revisões e recursos junto ao INSS e à Justiça Federal.",
   },
 ];
 
