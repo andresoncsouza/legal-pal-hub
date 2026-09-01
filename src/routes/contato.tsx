@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { siteConfig, getWhatsappUrl } from "@/lib/site-config";
 
 export const Route = createFileRoute("/contato")({
   component: ContatoPage,
@@ -27,6 +28,8 @@ export const Route = createFileRoute("/contato")({
 });
 
 function ContatoPage() {
+  const whatsapp = getWhatsappUrl();
+
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
@@ -73,7 +76,20 @@ function ContatoPage() {
                     <h3 className="font-display text-lg font-semibold text-navy">
                       Telefone
                     </h3>
-                    <p className="mt-1 text-sm text-muted-foreground">(41) 99197-9594</p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {whatsapp ? (
+                        <a
+                          href={whatsapp}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="transition-colors hover:text-gold"
+                        >
+                          {siteConfig.phoneLabel}
+                        </a>
+                      ) : (
+                        siteConfig.phoneLabel
+                      )}
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -85,7 +101,7 @@ function ContatoPage() {
                       E-mail
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      contato@andresoncosta.adv.br
+                      {siteConfig.email}
                     </p>
                   </div>
                 </div>
@@ -150,10 +166,10 @@ function ContatoPage() {
                   className="w-full rounded border border-input bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                 >
                   <option value="">Selecione uma área</option>
-                  <option value="civil">Direito Civil</option>
-                  <option value="empresarial">Direito Empresarial</option>
-                  <option value="trabalhista">Direito Trabalhista</option>
                   <option value="penal">Direito Penal</option>
+                  <option value="crimes-economicos">Crimes Econômicos</option>
+                  <option value="tributario">Direito Tributário</option>
+                  <option value="previdenciario">Direito Previdenciário</option>
                   <option value="outro">Outro</option>
                 </select>
               </div>
