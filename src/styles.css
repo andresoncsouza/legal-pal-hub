@@ -40,6 +40,8 @@
   --color-gold: var(--gold);
   --color-graphite: var(--graphite);
   --color-grey: var(--grey);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-dark: var(--whatsapp-dark);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
 }
@@ -53,6 +55,8 @@
   --gold: oklch(0.69 0.062 82);
   --graphite: oklch(0.27 0 0);
   --grey: oklch(0.55 0 0);
+  --whatsapp: #1baa5b;
+  --whatsapp-dark: #15904a;
 
   --background: oklch(1 0 0);
   --foreground: var(--graphite);
