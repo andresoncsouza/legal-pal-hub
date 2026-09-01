@@ -1,10 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { getWhatsappUrl } from "@/lib/site-config";
 
 /**
  * Desktop: botão circular discreto.
- * Mobile: barra fixa inferior "Agendar atendimento".
+ * Mobile: barra fixa inferior "Falar com advogado".
  * O número é configurado em VITE_WHATSAPP_NUMBER; sem número, aponta para /contato.
  */
 export function WhatsAppButton() {
@@ -19,17 +19,17 @@ export function WhatsAppButton() {
             target="_blank"
             rel="noreferrer noopener"
             aria-label="Falar pelo WhatsApp"
-            className="flex h-13 w-13 items-center justify-center rounded-full bg-navy p-3.5 text-gold shadow-lg transition-all duration-300 hover:bg-navy-dark hover:scale-105"
+            className="flex h-13 w-13 items-center justify-center rounded-full bg-whatsapp p-3.5 text-white shadow-lg transition-all duration-300 hover:bg-whatsapp-dark hover:scale-105"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5" />
           </a>
         ) : (
           <Link
             to="/contato"
             aria-label="Agendar atendimento"
-            className="flex items-center justify-center rounded-full bg-navy p-3.5 text-gold shadow-lg transition-all duration-300 hover:bg-navy-dark hover:scale-105"
+            className="flex items-center justify-center rounded-full bg-whatsapp p-3.5 text-white shadow-lg transition-all duration-300 hover:bg-whatsapp-dark hover:scale-105"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5" />
           </Link>
         )}
       </div>
@@ -40,18 +40,18 @@ export function WhatsAppButton() {
             href={url}
             target="_blank"
             rel="noreferrer noopener"
-            className="flex min-h-14 items-center justify-center gap-2 bg-navy text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-white"
+            className="flex min-h-14 items-center justify-center gap-2 bg-whatsapp text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-white"
           >
-            <MessageCircle className="h-4 w-4 text-gold" />
-            Agendar atendimento
+            <WhatsAppIcon className="h-4 w-4" />
+            Falar com advogado
           </a>
         ) : (
           <Link
             to="/contato"
-            className="flex min-h-14 items-center justify-center gap-2 bg-navy text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-white"
+            className="flex min-h-14 items-center justify-center gap-2 bg-whatsapp text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-white"
           >
-            <MessageCircle className="h-4 w-4 text-gold" />
-            Agendar atendimento
+            <WhatsAppIcon className="h-4 w-4" />
+            Falar com advogado
           </Link>
         )}
       </div>

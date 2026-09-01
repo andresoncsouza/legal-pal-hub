@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 import { navLinks } from "@/data/content";
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { siteConfig, getWhatsappUrl } from "@/lib/site-config";
 
 export function SiteFooter() {
@@ -68,7 +69,7 @@ export function SiteFooter() {
                   aria-label="WhatsApp"
                   className="inline-flex h-11 w-11 items-center justify-center border border-white/15 transition-colors hover:border-gold hover:text-gold"
                 >
-                  <MessageCircle className="h-4 w-4" />
+                  <WhatsAppIcon className="h-4 w-4" />
                 </a>
               ) : (
                 <Link
@@ -76,7 +77,7 @@ export function SiteFooter() {
                   aria-label="WhatsApp — via página de contato"
                   className="inline-flex h-11 w-11 items-center justify-center border border-white/15 transition-colors hover:border-gold hover:text-gold"
                 >
-                  <MessageCircle className="h-4 w-4" />
+                  <WhatsAppIcon className="h-4 w-4" />
                 </Link>
               )}
             </div>

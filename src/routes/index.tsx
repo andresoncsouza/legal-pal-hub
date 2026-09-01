@@ -1,8 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Button } from "@/components/ui/button";
+import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { ArrowRight, Shield, Gavel, Landmark, Wallet } from "lucide-react";
+import { WhatsAppCta } from "@/components/whatsapp-cta";
+import { Shield, Gavel, Landmark, Wallet } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -50,17 +50,7 @@ function Index() {
                 tributário e previdenciário.
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Link to="/contato">
-                  <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/80 text-white">
-                    AGENDAR ATENDIMENTO
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link to="/sobre">
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                    Conheça o escritório
-                  </Button>
-                </Link>
+                <WhatsAppCta />
               </div>
             </div>
           </div>
@@ -139,13 +129,8 @@ function Index() {
               Entre em contato e agende uma consulta. Nossa equipe está pronta para
               analisar seu caso e apresentar a melhor solução.
             </p>
-            <div className="mt-8">
-              <Link to="/contato">
-                <Button size="lg">
-                  Fale com um advogado
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
+            <div className="mt-8 flex justify-center">
+              <WhatsAppCta />
             </div>
           </div>
         </section>

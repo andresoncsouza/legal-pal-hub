@@ -4,7 +4,9 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { navLinks } from "@/data/content";
 import { Logo } from "@/components/logo";
-import { buttonStyles } from "@/components/actions";
+import { ActionAnchor } from "@/components/actions";
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { getWhatsappUrl } from "@/lib/site-config";
 
 /** overlay: header transparente sobre o hero, ganhando fundo sólido ao rolar. */
 export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
@@ -46,12 +48,16 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
               {link.label}
             </Link>
           ))}
-          <Link
-            to="/contato"
-            className={transparent ? buttonStyles.outlineLight : buttonStyles.solid}
+          <ActionAnchor
+            variant="whatsapp"
+            href={getWhatsappUrl() ?? "/contato"}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="!px-5 !py-2.5"
           >
+            <WhatsAppIcon className="h-4 w-4" />
             Agendar atendimento
-          </Link>
+          </ActionAnchor>
         </nav>
 
         <button
@@ -82,13 +88,16 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/contato"
-              onClick={() => setOpen(false)}
-              className={cn(buttonStyles.solid, "mt-6 mb-2 w-full")}
+            <ActionAnchor
+              variant="whatsapp"
+              href={getWhatsappUrl() ?? "/contato"}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="mt-6 mb-2 w-full"
             >
+              <WhatsAppIcon className="h-4 w-4" />
               Agendar atendimento
-            </Link>
+            </ActionAnchor>
           </nav>
         </div>
       )}
