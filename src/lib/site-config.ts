@@ -3,16 +3,16 @@
  * Para ativar o WhatsApp, defina VITE_WHATSAPP_NUMBER (formato: 5541999999999).
  * Enquanto estiver vazio, todos os CTAs direcionam para a página de contato.
  */
-const rawWhatsapp = (import.meta.env["VITE_WHATSAPP_NUMBER"] as string | undefined) ?? "";
+const rawWhatsapp = (import.meta.env["VITE_WHATSAPP_NUMBER"] as string | undefined) ?? "5541995672189";
 
 export const siteConfig = {
   name: "Andreson Costa Advocacia",
   lawyer: "Andreson Souza Costa",
   oab: "OAB/PR XXXXX",
-  email: "contato@seudominio.com.br",
+  email: "contato@andresoncosta.adv.br",
   city: "Curitiba – Paraná",
   hours: ["Segunda a sexta-feira", "08h às 18h"],
-  phoneLabel: "(XX) XXXXX-XXXX",
+  phoneLabel: "(41) 99567-2189",
   whatsappNumber: rawWhatsapp.replace(/\D/g, ""),
   whatsappMessage: "Olá! Gostaria de informações sobre atendimento jurídico.",
   social: {
