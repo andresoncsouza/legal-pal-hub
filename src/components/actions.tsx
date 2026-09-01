@@ -9,6 +9,8 @@ export const buttonStyles = {
   gold: cn(base, "bg-gold text-navy-dark hover:brightness-95"),
   outline: cn(base, "border border-navy/25 text-navy hover:border-navy hover:bg-navy hover:text-white"),
   outlineLight: cn(base, "border border-white/30 text-white hover:border-gold hover:text-gold"),
+  whatsapp: cn(base, "rounded-full bg-whatsapp text-white hover:bg-whatsapp-dark"),
+  phone: cn(base, "rounded-full border border-gold bg-navy-dark text-gold hover:bg-navy hover:text-white"),
 };
 
 export function ActionAnchor({
