@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { WhatsAppCta } from "@/components/whatsapp-cta";
 import { Reveal } from "@/components/reveal";
-import { ArrowLeft, Scale, Shield, Handcuffs, FileSearch, Gavel, Lock, BookOpen } from "lucide-react";
+import { ArrowLeft, Scale, Shield, FileSearch, Gavel, Lock, BookOpen } from "lucide-react";
 
 export const Route = createFileRoute("/atuacao/direito-penal")({
   component: DireitoPenalPage,
@@ -124,7 +124,7 @@ const steps = [
     title: "Prisão em flagrante",
     description:
       "Acompanhamento jurídico desde os primeiros atos, análise da legalidade da prisão e preparação para as medidas cabíveis.",
-    icon: Handcuffs,
+    icon: Lock,
   },
   {
     title: "Audiência de custódia",
