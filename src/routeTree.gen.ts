@@ -17,6 +17,7 @@ import { Route as DuvidasRouteImport } from './routes/duvidas'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
+import { Route as AtuacaoDireitoPenalRouteImport } from './routes/atuacao.direito-penal'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,37 +59,45 @@ const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
   path: '/termos-de-uso',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AtuacaoDireitoPenalRoute = AtuacaoDireitoPenalRouteImport.update({
+  id: '/direito-penal',
+  path: '/direito-penal',
+  getParentRoute: () => AtuacaoRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/atuacao': typeof AtuacaoRoute
+  '/atuacao': typeof AtuacaoRouteWithChildren
   '/contato': typeof ContatoRoute
   '/conteudos': typeof ConteudosRoute
   '/duvidas': typeof DuvidasRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
+  '/atuacao/direito-penal': typeof AtuacaoDireitoPenalRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/atuacao': typeof AtuacaoRoute
+  '/atuacao': typeof AtuacaoRouteWithChildren
   '/contato': typeof ContatoRoute
   '/conteudos': typeof ConteudosRoute
   '/duvidas': typeof DuvidasRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
+  '/atuacao/direito-penal': typeof AtuacaoDireitoPenalRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/atuacao': typeof AtuacaoRoute
+  '/atuacao': typeof AtuacaoRouteWithChildren
   '/contato': typeof ContatoRoute
   '/conteudos': typeof ConteudosRoute
   '/duvidas': typeof DuvidasRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
+  '/atuacao/direito-penal': typeof AtuacaoDireitoPenalRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/politica-de-privacidade'
     | '/sobre'
     | '/termos-de-uso'
+    | '/atuacao/direito-penal'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/politica-de-privacidade'
     | '/sobre'
     | '/termos-de-uso'
+    | '/atuacao/direito-penal'
   id:
     | '__root__'
     | '/'
@@ -121,11 +132,12 @@ export interface FileRouteTypes {
     | '/politica-de-privacidade'
     | '/sobre'
     | '/termos-de-uso'
+    | '/atuacao/direito-penal'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AtuacaoRoute: typeof AtuacaoRoute
+  AtuacaoRoute: typeof AtuacaoRouteWithChildren
   ContatoRoute: typeof ContatoRoute
   ConteudosRoute: typeof ConteudosRoute
   DuvidasRoute: typeof DuvidasRoute
@@ -192,12 +204,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermosDeUsoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/atuacao/direito-penal': {
+      id: '/atuacao/direito-penal'
+      path: '/direito-penal'
+      fullPath: '/atuacao/direito-penal'
+      preLoaderRoute: typeof AtuacaoDireitoPenalRouteImport
+      parentRoute: typeof AtuacaoRoute
+    }
   }
 }
 
+interface AtuacaoRouteChildren {
+  AtuacaoDireitoPenalRoute: typeof AtuacaoDireitoPenalRoute
+}
+
+const AtuacaoRouteChildren: AtuacaoRouteChildren = {
+  AtuacaoDireitoPenalRoute: AtuacaoDireitoPenalRoute,
+}
+
+const AtuacaoRouteWithChildren =
+  AtuacaoRoute._addFileChildren(AtuacaoRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AtuacaoRoute: AtuacaoRoute,
+  AtuacaoRoute: AtuacaoRouteWithChildren,
   ContatoRoute: ContatoRoute,
   ConteudosRoute: ConteudosRoute,
   DuvidasRoute: DuvidasRoute,
