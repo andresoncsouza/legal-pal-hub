@@ -48,6 +48,15 @@ function Atuacao() {
                 <p className="mt-3 leading-relaxed text-muted-foreground">
                   {area.description}
                 </p>
+                {area.title === "Direito Penal" && (
+                  <Link
+                    to="/atuacao/direito-penal"
+                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wider text-gold transition-colors hover:text-navy"
+                  >
+                    Saiba mais
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </Link>
+                )}
               </div>
             ))}
           </div>

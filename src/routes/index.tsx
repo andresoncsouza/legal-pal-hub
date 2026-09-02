@@ -85,6 +85,15 @@ function Index() {
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {area.description}
                 </p>
+                {area.title === "Direito Penal" && (
+                  <Link
+                    to="/atuacao/direito-penal"
+                    className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-gold transition-colors hover:text-navy"
+                  >
+                    Saiba mais
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                  </Link>
+                )}
               </div>
             ))}
           </div>
