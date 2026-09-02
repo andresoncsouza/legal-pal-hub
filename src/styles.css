@@ -36,6 +36,7 @@
   --color-ring: var(--ring);
   --color-navy: var(--navy);
   --color-navy-dark: var(--navy-dark);
+  --color-wine: var(--wine);
   --color-offwhite: var(--offwhite);
   --color-gold: var(--gold);
   --color-graphite: var(--graphite);
@@ -49,14 +50,16 @@
 :root {
   --radius: 0.25rem;
 
-  --navy: oklch(0.28 0.035 254);
-  --navy-dark: oklch(0.22 0.03 256);
-  --offwhite: oklch(0.968 0.007 92);
-  --gold: oklch(0.69 0.062 82);
-  --graphite: oklch(0.27 0 0);
-  --grey: oklch(0.55 0 0);
-  --whatsapp: #1baa5b;
-  --whatsapp-dark: #15904a;
+  /* Identidade vinho/bordô + champagne */
+  --navy: #42121f; /* vinho profundo principal */
+  --navy-dark: #2b0b14; /* vinho quase preto */
+  --wine: #6b1e32; /* vinho secundário */
+  --offwhite: #f8f5f0;
+  --gold: #b79a62; /* champagne */
+  --graphite: #252329;
+  --grey: #6f6a72;
+  --whatsapp: #16a34a;
+  --whatsapp-dark: #12833c;
 
   --background: oklch(1 0 0);
   --foreground: var(--graphite);
