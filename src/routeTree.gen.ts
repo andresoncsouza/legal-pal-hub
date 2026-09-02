@@ -17,6 +17,7 @@ import { Route as DuvidasRouteImport } from './routes/duvidas'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
+import { Route as AtuacaoIndexRouteImport } from './routes/atuacao.index'
 import { Route as AtuacaoDireitoPenalRouteImport } from './routes/atuacao.direito-penal'
 
 const IndexRoute = IndexRouteImport.update({
@@ -59,6 +60,11 @@ const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
   path: '/termos-de-uso',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AtuacaoIndexRoute = AtuacaoIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AtuacaoRoute,
+} as any)
 const AtuacaoDireitoPenalRoute = AtuacaoDireitoPenalRouteImport.update({
   id: '/direito-penal',
   path: '/direito-penal',
@@ -75,10 +81,10 @@ export interface FileRoutesByFullPath {
   '/sobre': typeof SobreRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/atuacao/direito-penal': typeof AtuacaoDireitoPenalRoute
+  '/atuacao/': typeof AtuacaoIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/atuacao': typeof AtuacaoRouteWithChildren
   '/contato': typeof ContatoRoute
   '/conteudos': typeof ConteudosRoute
   '/duvidas': typeof DuvidasRoute
@@ -86,6 +92,7 @@ export interface FileRoutesByTo {
   '/sobre': typeof SobreRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/atuacao/direito-penal': typeof AtuacaoDireitoPenalRoute
+  '/atuacao': typeof AtuacaoIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -98,6 +105,7 @@ export interface FileRoutesById {
   '/sobre': typeof SobreRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
   '/atuacao/direito-penal': typeof AtuacaoDireitoPenalRoute
+  '/atuacao/': typeof AtuacaoIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,10 +119,10 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/termos-de-uso'
     | '/atuacao/direito-penal'
+    | '/atuacao/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/atuacao'
     | '/contato'
     | '/conteudos'
     | '/duvidas'
@@ -122,6 +130,7 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/termos-de-uso'
     | '/atuacao/direito-penal'
+    | '/atuacao'
   id:
     | '__root__'
     | '/'
@@ -133,6 +142,7 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/termos-de-uso'
     | '/atuacao/direito-penal'
+    | '/atuacao/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -204,6 +214,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermosDeUsoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/atuacao/': {
+      id: '/atuacao/'
+      path: '/'
+      fullPath: '/atuacao/'
+      preLoaderRoute: typeof AtuacaoIndexRouteImport
+      parentRoute: typeof AtuacaoRoute
+    }
     '/atuacao/direito-penal': {
       id: '/atuacao/direito-penal'
       path: '/direito-penal'
@@ -216,10 +233,12 @@ declare module '@tanstack/react-router' {
 
 interface AtuacaoRouteChildren {
   AtuacaoDireitoPenalRoute: typeof AtuacaoDireitoPenalRoute
+  AtuacaoIndexRoute: typeof AtuacaoIndexRoute
 }
 
 const AtuacaoRouteChildren: AtuacaoRouteChildren = {
   AtuacaoDireitoPenalRoute: AtuacaoDireitoPenalRoute,
+  AtuacaoIndexRoute: AtuacaoIndexRoute,
 }
 
 const AtuacaoRouteWithChildren =
