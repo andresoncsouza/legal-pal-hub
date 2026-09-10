@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { RevealText } from "@/components/reveal-text";
 import { Shield, Gavel, Landmark, Wallet, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
