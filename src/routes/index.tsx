@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { WhatsAppCta } from "@/components/whatsapp-cta";
+import { RevealText } from "@/components/reveal-text";
 import { Shield, Gavel, Landmark, Wallet, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -41,9 +42,11 @@ function Index() {
                   Excelência jurídica e estratégica
                 </span>
               </div>
-              <h1 className="font-display text-4xl font-bold leading-tight text-navy sm:text-5xl md:text-6xl">
-                Defesa de seus direitos com estratégia e excelência
-              </h1>
+              <RevealText
+                as="h1"
+                text="Defesa de seus direitos com estratégia e excelência"
+                className="block font-display text-4xl font-bold leading-tight text-navy sm:text-5xl md:text-6xl"
+              />
               <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
                 Atuamos com ética, compromisso e conhecimento técnico para oferecer
                 soluções jurídicas personalizadas em direito penal, crimes econômicos,
@@ -62,9 +65,11 @@ function Index() {
             <span className="text-xs font-semibold uppercase tracking-wider text-gold">
               Áreas de atuação
             </span>
-            <h2 className="mt-3 font-display text-3xl font-bold text-navy sm:text-4xl">
-              Soluções jurídicas especializadas
-            </h2>
+            <RevealText
+              as="h2"
+              text="Soluções jurídicas especializadas"
+              className="mt-3 block font-display text-3xl font-bold text-navy sm:text-4xl"
+            />
             <p className="mt-4 text-muted-foreground">
               Oferecemos assessoria e representação nas áreas em que atuamos,
               sempre com foco na melhor estratégia para cada cliente.
@@ -106,9 +111,11 @@ function Index() {
               <span className="text-xs font-semibold uppercase tracking-wider text-gold">
                 Por que nos escolher
               </span>
-              <h2 className="mt-3 font-display text-3xl font-bold text-navy sm:text-4xl">
-                Compromisso com resultados
-              </h2>
+              <RevealText
+                as="h2"
+                text="Compromisso com resultados"
+                className="mt-3 block font-display text-3xl font-bold text-navy sm:text-4xl"
+              />
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
               {differentials.map((item) => (
@@ -131,9 +138,11 @@ function Index() {
         {/* CTA */}
         <section className="container-page section-y">
           <div className="mx-auto max-w-3xl rounded border border-gold/30 bg-gold/5 p-8 text-center md:p-12">
-            <h2 className="font-display text-2xl font-bold text-navy sm:text-3xl">
-              Precisa de orientação jurídica?
-            </h2>
+            <RevealText
+              as="h2"
+              text="Precisa de orientação jurídica?"
+              className="block font-display text-2xl font-bold text-navy sm:text-3xl"
+            />
             <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
               Entre em contato e agende uma consulta. Nossa equipe está pronta para
               analisar seu caso e apresentar a melhor solução.
