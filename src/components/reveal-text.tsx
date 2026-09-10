@@ -49,9 +49,8 @@ export function RevealText({
             className={cn("offset-word-inner", visible && "offset-word-visible")}
             style={{ transitionDelay: `${delay + i * step}ms` }}
           >
-            {word}
+            {i < words.length - 1 ? `${word}\u00A0` : word}
           </span>
-          {i < words.length - 1 ? " " : null}
         </span>
       ))}
     </Tag>
