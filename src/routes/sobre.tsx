@@ -36,9 +36,11 @@ function SobrePage() {
             <span className="text-xs font-semibold uppercase tracking-wider text-gold">
               Sobre o escritório
             </span>
-            <h1 className="mx-auto mt-3 max-w-3xl font-display text-4xl font-bold text-navy sm:text-5xl">
-              Excelência, ética e compromisso com o cliente
-            </h1>
+            <RevealText
+              as="h1"
+              text="Excelência, ética e compromisso com o cliente"
+              className="mx-auto mt-3 block max-w-3xl font-display text-4xl font-bold text-navy sm:text-5xl"
+            />
           </div>
         </section>
 

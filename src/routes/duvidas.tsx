@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Reveal } from "@/components/reveal";
+import { RevealText } from "@/components/reveal-text";
 import {
   Accordion,
   AccordionContent,
@@ -39,9 +40,11 @@ function DuvidasPage() {
           <div className="container-page section-y">
             <Reveal>
               <p className="eyebrow text-gold">Dúvidas frequentes</p>
-              <h1 className="display-lg mt-4 max-w-2xl text-navy">
-                Perguntas comuns sobre o atendimento
-              </h1>
+              <RevealText
+                as="h1"
+                text="Perguntas comuns sobre o atendimento"
+                className="display-lg mt-4 block max-w-2xl text-navy"
+              />
             </Reveal>
           </div>
         </section>

@@ -27,9 +27,11 @@ function AtuacaoIndex() {
             <span className="text-xs font-semibold uppercase tracking-wider text-gold">
               Nossas Especialidades
             </span>
-            <h1 className="mt-3 font-display text-4xl font-bold text-navy sm:text-5xl">
-              Áreas de atuação
-            </h1>
+            <RevealText
+              as="h1"
+              text="Áreas de atuação"
+              className="mt-3 block font-display text-4xl font-bold text-navy sm:text-5xl"
+            />
             <p className="mt-4 text-muted-foreground text-lg">
               Atuamos de forma estratégica e técnica nas principais áreas de interesse do cliente.
             </p>

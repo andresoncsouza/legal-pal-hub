@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { WhatsAppCta } from "@/components/whatsapp-cta";
 import { Reveal } from "@/components/reveal";
+import { RevealText } from "@/components/reveal-text";
 import { ArrowLeft, Scale, Shield, FileSearch, Gavel, Lock, BookOpen } from "lucide-react";
 
 export const Route = createFileRoute("/atuacao/direito-penal")({
@@ -44,9 +45,11 @@ function DireitoPenalPage() {
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <h1 className="mt-6 font-display text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
-                Direito Penal
-              </h1>
+              <RevealText
+                as="h1"
+                text="Direito Penal"
+                className="mt-6 block font-display text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl"
+              />
             </Reveal>
             <Reveal delay={200}>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
@@ -63,9 +66,11 @@ function DireitoPenalPage() {
             <span className="text-xs font-semibold uppercase tracking-wider text-gold">
               Como atuamos
             </span>
-            <h2 className="mt-3 font-display text-3xl font-bold text-navy sm:text-4xl">
-              Defesa jurídica em diferentes etapas do caso criminal
-            </h2>
+            <RevealText
+              as="h2"
+              text="Defesa jurídica em diferentes etapas do caso criminal"
+              className="mt-3 block font-display text-3xl font-bold text-navy sm:text-4xl"
+            />
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
