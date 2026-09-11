@@ -61,24 +61,25 @@
   --whatsapp: #16a34a;
   --whatsapp-dark: #12833c;
 
-  --background: #fbf8f5;
-  --foreground: var(--graphite);
-  --card: oklch(1 0 0);
-  --card-foreground: var(--graphite);
-  --popover: oklch(1 0 0);
-  --popover-foreground: var(--graphite);
-  --primary: var(--navy);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: var(--offwhite);
-  --secondary-foreground: var(--navy);
-  --muted: var(--offwhite);
-  --muted-foreground: var(--grey);
-  --accent: var(--offwhite);
-  --accent-foreground: var(--navy);
+  /* Fundo bordô em todo o site; elementos claros para contraste */
+  --background: #6b1e32;
+  --foreground: var(--offwhite);
+  --card: #42121f;
+  --card-foreground: var(--offwhite);
+  --popover: #42121f;
+  --popover-foreground: var(--offwhite);
+  --primary: var(--gold);
+  --primary-foreground: var(--graphite);
+  --secondary: #42121f;
+  --secondary-foreground: var(--offwhite);
+  --muted: #42121f;
+  --muted-foreground: rgba(248, 245, 240, 0.75);
+  --accent: #42121f;
+  --accent-foreground: var(--offwhite);
   --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: oklch(1 0 0);
-  --border: #e6ddd6;
-  --input: #dbd0c8;
+  --border: rgba(183, 154, 98, 0.25);
+  --input: rgba(183, 154, 98, 0.35);
   --ring: var(--gold);
 }
 
