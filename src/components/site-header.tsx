@@ -28,7 +28,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         transparent
           ? "bg-transparent"
-          : "border-b border-border/70 bg-white/95 backdrop-blur-md",
+          : "border-b border-border/70 bg-background/95 backdrop-blur-md",
       )}
     >
       <div className="container-page flex h-20 items-center justify-between gap-6">
@@ -42,7 +42,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
               activeProps={{ className: "!text-gold" }}
               className={cn(
                 "eyebrow text-[0.65rem] transition-colors",
-                transparent ? "text-white/80 hover:text-gold" : "text-grey hover:text-navy",
+                transparent ? "text-white/80 hover:text-gold" : "text-offwhite/70 hover:text-gold",
               )}
             >
               {link.label}
@@ -67,7 +67,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           className={cn(
             "inline-flex h-11 w-11 items-center justify-center border transition-colors lg:hidden",
-            transparent ? "border-white/30 text-white" : "border-border text-navy",
+            transparent ? "border-white/30 text-white" : "border-border text-offwhite",
           )}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -75,7 +75,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-white lg:hidden">
+        <div className="border-t border-border bg-card lg:hidden">
           <nav aria-label="Navegação mobile" className="container-page flex flex-col py-4">
             {navLinks.map((link) => (
               <Link
@@ -83,7 +83,7 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
                 to={link.to}
                 onClick={() => setOpen(false)}
                 activeProps={{ className: "!text-gold" }}
-                className="eyebrow border-b border-border/60 py-4 text-[0.7rem] text-navy"
+                className="eyebrow border-b border-border/60 py-4 text-[0.7rem] text-offwhite"
               >
                 {link.label}
               </Link>
