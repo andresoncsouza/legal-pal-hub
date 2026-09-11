@@ -61,7 +61,7 @@
   --whatsapp: #16a34a;
   --whatsapp-dark: #12833c;
 
-  --background: oklch(1 0 0);
+  --background: #fbf8f5;
   --foreground: var(--graphite);
   --card: oklch(1 0 0);
   --card-foreground: var(--graphite);
