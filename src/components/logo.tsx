@@ -11,7 +11,7 @@ export function Logo({ light = false, className }: { light?: boolean; className?
       <span
         className={cn(
           "font-display text-[1.05rem] font-normal tracking-[0.2em] transition-colors sm:text-lg",
-          light ? "text-white" : "text-navy",
+          light ? "text-white" : "text-offwhite",
         )}
       >
         ANDRESON COSTA
@@ -21,7 +21,7 @@ export function Logo({ light = false, className }: { light?: boolean; className?
         <span
           className={cn(
             "eyebrow text-[0.6rem]",
-            light ? "text-white/65" : "text-grey",
+            light ? "text-white/65" : "text-offwhite/65",
           )}
         >
           ADVOCACIA E CONSULTORIA JURÍDICA
