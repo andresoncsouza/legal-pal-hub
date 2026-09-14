@@ -45,9 +45,9 @@ function Index() {
               <RevealText
                 as="h1"
                 text="Defesa de seus direitos com estratégia e excelência"
-                className="block font-display text-4xl font-bold leading-tight text-offwhite sm:text-5xl md:text-6xl"
+                className="block font-display text-4xl font-bold leading-tight text-navy sm:text-5xl md:text-6xl"
               />
-              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-offwhite/80">
+              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
                 Atuamos com ética, compromisso e conhecimento técnico para oferecer
                 soluções jurídicas personalizadas em direito penal, crimes econômicos,
                 tributário e previdenciário.
@@ -68,9 +68,9 @@ function Index() {
             <RevealText
               as="h2"
               text="Soluções jurídicas especializadas"
-              className="mt-3 block font-display text-3xl font-bold text-offwhite sm:text-4xl"
+              className="mt-3 block font-display text-3xl font-bold text-navy sm:text-4xl"
             />
-            <p className="mt-4 text-offwhite/80">
+            <p className="mt-4 text-muted-foreground">
               Oferecemos assessoria e representação nas áreas em que atuamos,
               sempre com foco na melhor estratégia para cada cliente.
             </p>
@@ -84,16 +84,16 @@ function Index() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded border border-gold/30 bg-gold/5 text-gold">
                   <area.icon className="h-6 w-6" />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-offwhite">
+                <h3 className="font-display text-xl font-semibold text-navy">
                   {area.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-offwhite/75">
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {area.description}
                 </p>
                 {area.title === "Direito Penal" && (
                   <Link
                     to="/atuacao/direito-penal"
-                    className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-gold transition-colors hover:text-offwhite"
+                    className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-gold transition-colors hover:text-navy"
                   >
                     Saiba mais
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
@@ -105,7 +105,7 @@ function Index() {
         </section>
 
         {/* Diferenciais */}
-        <section className="border-y border-border bg-card">
+        <section className="border-y border-border bg-offwhite">
           <div className="container-page section-y">
             <div className="mx-auto max-w-3xl text-center">
               <span className="text-xs font-semibold uppercase tracking-wider text-gold">
@@ -114,7 +114,7 @@ function Index() {
               <RevealText
                 as="h2"
                 text="Compromisso com resultados"
-                className="mt-3 block font-display text-3xl font-bold text-offwhite sm:text-4xl"
+                className="mt-3 block font-display text-3xl font-bold text-navy sm:text-4xl"
               />
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -123,10 +123,10 @@ function Index() {
                   <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-gold/30 bg-gold/5 text-gold">
                     <item.icon className="h-7 w-7" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-offwhite">
+                  <h3 className="font-display text-lg font-semibold text-navy">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-offwhite/75">
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     {item.description}
                   </p>
                 </div>
@@ -141,9 +141,9 @@ function Index() {
             <RevealText
               as="h2"
               text="Precisa de orientação jurídica?"
-              className="block font-display text-2xl font-bold text-offwhite sm:text-3xl"
+              className="block font-display text-2xl font-bold text-navy sm:text-3xl"
             />
-            <p className="mx-auto mt-4 max-w-xl text-offwhite/80">
+            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
               Entre em contato e agende uma consulta. Nossa equipe está pronta para
               analisar seu caso e apresentar a melhor solução.
             </p>

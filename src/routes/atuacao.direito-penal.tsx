@@ -69,7 +69,7 @@ function DireitoPenalPage() {
             <RevealText
               as="h2"
               text="Defesa jurídica em diferentes etapas do caso criminal"
-              className="mt-3 block font-display text-3xl font-bold text-offwhite sm:text-4xl"
+              className="mt-3 block font-display text-3xl font-bold text-navy sm:text-4xl"
             />
           </div>
 
@@ -80,10 +80,10 @@ function DireitoPenalPage() {
                   <div className="mb-6 flex h-14 w-14 items-center justify-center rounded border border-gold/30 bg-gold/5 text-gold transition-colors group-hover:bg-gold/10">
                     <step.icon className="h-7 w-7" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-offwhite">
+                  <h3 className="font-display text-xl font-semibold text-navy">
                     {step.title}
                   </h3>
-                  <p className="mt-3 leading-relaxed text-offwhite/75">
+                  <p className="mt-3 leading-relaxed text-muted-foreground">
                     {step.description}
                   </p>
                 </div>
@@ -95,10 +95,10 @@ function DireitoPenalPage() {
         {/* CTA */}
         <section className="container-page section-y">
           <div className="mx-auto max-w-3xl rounded border border-gold/30 bg-gold/5 p-8 text-center md:p-12">
-            <h2 className="font-display text-2xl font-bold text-offwhite sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-navy sm:text-3xl">
               Precisa de defesa criminal?
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-offwhite/80">
+            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
               Entre em contato para uma conversa inicial. Cada caso é analisado
               com discrição e estratégia.
             </p>
@@ -112,7 +112,7 @@ function DireitoPenalPage() {
         <section className="container-page pb-16">
           <Link
             to="/atuacao"
-            className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-offwhite transition-colors hover:text-gold"
+            className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold"
           >
             <ArrowLeft className="h-4 w-4" />
             Voltar para áreas de atuação

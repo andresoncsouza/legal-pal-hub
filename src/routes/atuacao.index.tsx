@@ -10,7 +10,10 @@ export const Route = createFileRoute("/atuacao/")({
   head: () => ({
     meta: [
       { title: "Áreas de Atuação | Andreson Costa" },
-      { name: "description", content: "Conheça nossas especialidades jurídicas: Direito Penal, Crimes Econômicos, Direito Tributário e Previdenciário." },
+      {
+        name: "description",
+        content: "Conheça nossas especialidades jurídicas: Direito Penal, Crimes Econômicos, Direito Tributário e Previdenciário.",
+      },
     ],
   }),
 });
@@ -28,9 +31,9 @@ function AtuacaoIndex() {
             <RevealText
               as="h1"
               text="Áreas de atuação"
-              className="mt-3 block font-display text-4xl font-bold text-offwhite sm:text-5xl"
+              className="mt-3 block font-display text-4xl font-bold text-navy sm:text-5xl"
             />
-            <p className="mt-4 text-offwhite/80 text-lg">
+            <p className="mt-4 text-muted-foreground text-lg">
               Atuamos de forma estratégica e técnica nas principais áreas de interesse do cliente.
             </p>
           </div>
@@ -43,16 +46,16 @@ function AtuacaoIndex() {
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded border border-gold/30 bg-gold/5 text-gold">
                   <area.icon className="h-7 w-7" />
                 </div>
-                <h3 className="font-display text-2xl font-semibold text-offwhite">
+                <h3 className="font-display text-2xl font-semibold text-navy">
                   {area.title}
                 </h3>
-                <p className="mt-3 leading-relaxed text-offwhite/75">
+                <p className="mt-3 leading-relaxed text-muted-foreground">
                   {area.description}
                 </p>
                 {area.title === "Direito Penal" && (
                   <Link
                     to="/atuacao/direito-penal"
-                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wider text-gold transition-colors hover:text-offwhite"
+                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wider text-gold transition-colors hover:text-navy"
                   >
                     Saiba mais
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
