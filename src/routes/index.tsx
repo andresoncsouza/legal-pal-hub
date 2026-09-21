@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { WhatsAppCta } from "@/components/whatsapp-cta";
 import { RevealText } from "@/components/reveal-text";
-import { Shield, Gavel, Landmark, Wallet, ArrowRight } from "lucide-react";
+import { Shield, Gavel, Landmark, Wallet, ArrowRight, MapPin } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -135,7 +135,7 @@ function Index() {
           </div>
         </section>
 
-        {/* CTA */}
+        {/* Contato + mapa */}
         <section className="container-page section-y">
           <div className="mx-auto max-w-3xl rounded border border-gold/30 bg-gold/5 p-8 text-center md:p-12">
             <RevealText
@@ -150,6 +150,25 @@ function Index() {
             <div className="mt-8 flex justify-center">
               <WhatsAppCta />
             </div>
+          </div>
+          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded border border-border bg-card">
+            <iframe
+              title="Mapa — Curitiba, Paraná"
+              src="https://maps.google.com/maps?q=Curitiba,+Paran%C3%A1,+Brasil&z=12&output=embed"
+              className="h-56 w-full border-0 sm:h-64"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Curitiba%2C+Paran%C3%A1"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex items-center justify-center gap-2 border-t border-border px-4 py-3 text-xs font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold"
+            >
+              <MapPin className="h-3.5 w-3.5" />
+              Ver no Google Maps
+            </a>
           </div>
         </section>
       </main>
