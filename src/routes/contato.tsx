@@ -62,9 +62,7 @@ function ContatoPage() {
                       Endereço
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Av. Paulista, 1000, 18º andar
-                      <br />
-                      Bela Vista, São Paulo — SP, 01310-100
+                      Curitiba – Paraná
                     </p>
                   </div>
                 </div>
@@ -118,6 +116,26 @@ function ContatoPage() {
                     </p>
                   </div>
                 </div>
+              </div>
+
+              <div className="overflow-hidden rounded border border-border bg-card">
+                <iframe
+                  title="Mapa — Curitiba, Paraná"
+                  src="https://maps.google.com/maps?q=Curitiba,+Paran%C3%A1,+Brasil&z=12&output=embed"
+                  className="h-64 w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Curitiba%2C+Paran%C3%A1"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="flex items-center justify-center gap-2 border-t border-border px-4 py-3 text-xs font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold"
+                >
+                  <MapPin className="h-3.5 w-3.5" />
+                  Ver no Google Maps
+                </a>
               </div>
             </div>
 
