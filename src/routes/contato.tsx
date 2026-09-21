@@ -62,9 +62,7 @@ function ContatoPage() {
                       Endereço
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Av. Paulista, 1000, 18º andar
-                      <br />
-                      Bela Vista, São Paulo — SP, 01310-100
+                      Curitiba – Paraná
                     </p>
                   </div>
                 </div>
