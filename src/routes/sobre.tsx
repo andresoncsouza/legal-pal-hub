@@ -155,6 +155,6 @@ const team = [
   {
     name: "Dr. Andreson Costa",
     role: "Sócio fundador",
-    bio: "Advogado atuante em Direito Civil e Empresarial, com atuação estratégica e técnica em demandas complexas.",
+    bio: "Advogado atuante em Direito Penal, Crimes Econômicos, Direito Tributário e Direito Previdenciário, com atuação estratégica e técnica em demandas complexas.",
   },
 ];
