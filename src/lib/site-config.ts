@@ -16,7 +16,7 @@ export const siteConfig = {
   whatsappNumber: rawWhatsapp.replace(/\D/g, ""),
   whatsappMessage: "Olá! Gostaria de informações sobre atendimento jurídico.",
   social: {
-    instagram: "https://www.instagram.com/",
+    instagram: "https://www.instagram.com/andresoncostaa",
     linkedin: "https://www.linkedin.com/feed/",
   },
 };
