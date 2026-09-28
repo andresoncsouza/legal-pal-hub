@@ -151,25 +151,27 @@ function Index() {
               <WhatsAppCta />
             </div>
           </div>
-          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded border border-border bg-card">
-            <iframe
-              title="Mapa — Curitiba, Paraná"
-              src="https://maps.google.com/maps?q=Curitiba,+Paran%C3%A1,+Brasil&z=12&output=embed"
-              className="h-56 w-full border-0 sm:h-64"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Curitiba%2C+Paran%C3%A1"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="flex items-center justify-center gap-2 border-t border-border px-4 py-3 text-xs font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold"
-            >
-              <MapPin className="h-3.5 w-3.5" />
-              Ver no Google Maps
-            </a>
-          </div>
+        </section>
+
+        {/* Mapa em largura total */}
+        <section className="w-full border-y border-border bg-card">
+          <iframe
+            title="Mapa — Curitiba, Paraná"
+            src="https://maps.google.com/maps?q=Curitiba,+Paran%C3%A1,+Brasil&z=12&output=embed"
+            className="h-72 w-full border-0 sm:h-80 md:h-96"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Curitiba%2C+Paran%C3%A1"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="flex items-center justify-center gap-2 border-t border-border px-4 py-3 text-xs font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold"
+          >
+            <MapPin className="h-3.5 w-3.5" />
+            Ver no Google Maps
+          </a>
         </section>
       </main>
       <SiteFooter />
