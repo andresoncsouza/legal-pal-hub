@@ -17,6 +17,7 @@ import { Route as DuvidasRouteImport } from './routes/duvidas'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
+import { Route as ApiLegalAssistantRouteImport } from './routes/api/legal-assistant'
 import { Route as AtuacaoIndexRouteImport } from './routes/atuacao.index'
 import { Route as AtuacaoDireitoPenalRouteImport } from './routes/atuacao.direito-penal'
 
@@ -60,6 +61,11 @@ const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
   path: '/termos-de-uso',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiLegalAssistantRoute = ApiLegalAssistantRouteImport.update({
+  id: '/api/legal-assistant',
+  path: '/api/legal-assistant',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AtuacaoIndexRoute = AtuacaoIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -80,6 +86,7 @@ export interface FileRoutesByFullPath {
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
+  '/api/legal-assistant': typeof ApiLegalAssistantRoute
   '/atuacao/direito-penal': typeof AtuacaoDireitoPenalRoute
   '/atuacao/': typeof AtuacaoIndexRoute
 }
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
+  '/api/legal-assistant': typeof ApiLegalAssistantRoute
   '/atuacao/direito-penal': typeof AtuacaoDireitoPenalRoute
   '/atuacao': typeof AtuacaoIndexRoute
 }
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
   '/termos-de-uso': typeof TermosDeUsoRoute
+  '/api/legal-assistant': typeof ApiLegalAssistantRoute
   '/atuacao/direito-penal': typeof AtuacaoDireitoPenalRoute
   '/atuacao/': typeof AtuacaoIndexRoute
 }
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/politica-de-privacidade'
     | '/sobre'
     | '/termos-de-uso'
+    | '/api/legal-assistant'
     | '/atuacao/direito-penal'
     | '/atuacao/'
   fileRoutesByTo: FileRoutesByTo
@@ -129,6 +139,7 @@ export interface FileRouteTypes {
     | '/politica-de-privacidade'
     | '/sobre'
     | '/termos-de-uso'
+    | '/api/legal-assistant'
     | '/atuacao/direito-penal'
     | '/atuacao'
   id:
@@ -141,6 +152,7 @@ export interface FileRouteTypes {
     | '/politica-de-privacidade'
     | '/sobre'
     | '/termos-de-uso'
+    | '/api/legal-assistant'
     | '/atuacao/direito-penal'
     | '/atuacao/'
   fileRoutesById: FileRoutesById
@@ -154,6 +166,7 @@ export interface RootRouteChildren {
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   SobreRoute: typeof SobreRoute
   TermosDeUsoRoute: typeof TermosDeUsoRoute
+  ApiLegalAssistantRoute: typeof ApiLegalAssistantRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -214,6 +227,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermosDeUsoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/legal-assistant': {
+      id: '/api/legal-assistant'
+      path: '/api/legal-assistant'
+      fullPath: '/api/legal-assistant'
+      preLoaderRoute: typeof ApiLegalAssistantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/atuacao/': {
       id: '/atuacao/'
       path: '/'
@@ -253,6 +273,7 @@ const rootRouteChildren: RootRouteChildren = {
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   SobreRoute: SobreRoute,
   TermosDeUsoRoute: TermosDeUsoRoute,
+  ApiLegalAssistantRoute: ApiLegalAssistantRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
