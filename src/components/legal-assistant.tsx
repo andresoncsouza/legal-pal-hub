@@ -8,11 +8,7 @@ import {
   ConversationContent,
   ConversationScrollButton,
 } from "@/components/ai-elements/conversation";
-import {
-  Message,
-  MessageContent,
-  MessageResponse,
-} from "@/components/ai-elements/message";
+import { Message, MessageContent, MessageResponse } from "@/components/ai-elements/message";
 import {
   PromptInput,
   PromptInputFooter,
@@ -45,10 +41,7 @@ export function LegalAssistant() {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const transport = useMemo(
-    () => new DefaultChatTransport({ api: "/api/legal-assistant" }),
-    [],
-  );
+  const transport = useMemo(() => new DefaultChatTransport({ api: "/api/legal-assistant" }), []);
   const { messages, sendMessage, status, error, stop, clearError } = useChat({
     id: "legal-assistant-session",
     transport,
@@ -119,7 +112,8 @@ export function LegalAssistant() {
               </div>
               <MessageContent>
                 <MessageResponse>
-                  Olá! Posso explicar temas gerais de **Direito Penal, Crimes Econômicos, Direito Tributário e Direito Previdenciário**. Como posso ajudar?
+                  Olá! Posso explicar temas gerais de **Direito Penal, Crimes Econômicos, Direito
+                  Tributário e Direito Previdenciário**. Como posso ajudar?
                 </MessageResponse>
               </MessageContent>
             </Message>
@@ -131,9 +125,7 @@ export function LegalAssistant() {
                     <MessageContent
                       key={`${message.id}-${index}`}
                       className={
-                        message.role === "user"
-                          ? "bg-navy text-primary-foreground"
-                          : undefined
+                        message.role === "user" ? "bg-navy text-primary-foreground" : undefined
                       }
                     >
                       <MessageResponse>{part.text}</MessageResponse>
@@ -168,7 +160,10 @@ export function LegalAssistant() {
             )}
 
             {error && (
-              <div role="alert" className="rounded border border-destructive/30 bg-destructive/5 p-3 text-xs text-destructive">
+              <div
+                role="alert"
+                className="rounded border border-destructive/30 bg-destructive/5 p-3 text-xs text-destructive"
+              >
                 {getVisibleError(error.message)}
               </div>
             )}
@@ -188,7 +183,9 @@ export function LegalAssistant() {
               aria-label="Sua dúvida jurídica"
             />
             <PromptInputFooter className="justify-between">
-              <span className="text-[0.65rem] text-muted-foreground">Não envie dados pessoais.</span>
+              <span className="text-[0.65rem] text-muted-foreground">
+                Não envie dados pessoais.
+              </span>
               <PromptInputSubmit
                 status={status}
                 onStop={() => void stop()}

@@ -1,15 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  convertToModelMessages,
-  safeValidateUIMessages,
-  streamText,
-  type UIMessage,
-} from "ai";
+import { convertToModelMessages, safeValidateUIMessages, streamText, type UIMessage } from "ai";
 import { createLegalAssistantProvider } from "@/lib/ai/gateway.server";
-import {
-  getLovableAiGatewayRunId,
-  withLovableAiGatewayRunIdHeader,
-} from "@/lib/ai/run-id.server";
+import { getLovableAiGatewayRunId, withLovableAiGatewayRunIdHeader } from "@/lib/ai/run-id.server";
 
 const MODEL = "openai/gpt-6-astra";
 const MAX_MESSAGES = 20;
@@ -50,9 +42,12 @@ export const Route = createFileRoute("/api/legal-assistant")({
       POST: async ({ request }) => {
         const contentLength = Number(request.headers.get("content-length") ?? "0");
         if (contentLength > MAX_REQUEST_BYTES) {
-          return new Response("A conversa ficou muito extensa. Recarregue a página para começar novamente.", {
-            status: 400,
-          });
+          return new Response(
+            "A conversa ficou muito extensa. Recarregue a página para começar novamente.",
+            {
+              status: 400,
+            },
+          );
         }
 
         let body: unknown;
@@ -72,9 +67,12 @@ export const Route = createFileRoute("/api/legal-assistant")({
           return new Response("Envie uma pergunta válida para o assistente.", { status: 400 });
         }
         if (validated.data.length > MAX_MESSAGES) {
-          return new Response("A conversa atingiu o limite. Recarregue a página para começar novamente.", {
-            status: 400,
-          });
+          return new Response(
+            "A conversa atingiu o limite. Recarregue a página para começar novamente.",
+            {
+              status: 400,
+            },
+          );
         }
 
         const apiKey = process.env["LOVABLE_API_KEY"];
