@@ -81,7 +81,7 @@ export function LegalAssistant() {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="inset-x-0 top-0 bottom-14 flex h-auto w-auto max-w-none translate-x-0 translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-gold/40 bg-background p-0 shadow-2xl data-[state=closed]:zoom-out-100 data-[state=open]:zoom-in-100 sm:left-auto sm:right-6 sm:top-auto sm:bottom-24 sm:h-[min(72dvh,42rem)] sm:w-[26rem] sm:rounded-md">
+      <DialogContent className="!inset-x-0 !top-0 !bottom-14 z-[70] flex !h-auto !w-auto !max-w-none !translate-x-0 !translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-gold/40 !bg-card p-0 shadow-2xl data-[state=closed]:zoom-out-100 data-[state=open]:zoom-in-100 sm:!left-auto sm:!right-6 sm:!top-auto sm:!bottom-24 sm:!h-[min(72dvh,42rem)] sm:!w-[26rem] sm:rounded-md">
         <header className="flex shrink-0 items-center gap-3 border-b border-border bg-navy px-4 py-3 pr-12 text-primary-foreground">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/60 bg-background p-1.5">
             <img
