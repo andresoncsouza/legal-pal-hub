@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { ScrollBehavior } from "../components/scroll-behavior";
 import { WhatsAppButton } from "../components/whatsapp-button";
+import { LegalAssistant } from "../components/legal-assistant";
 
 function NotFoundComponent() {
   return (
@@ -145,6 +146,7 @@ function RootComponent() {
       <ScrollBehavior />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <LegalAssistant />
       <WhatsAppButton />
     </QueryClientProvider>
   );
