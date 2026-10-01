@@ -11,7 +11,7 @@ import {
   withLovableAiGatewayRunIdHeader,
 } from "@/lib/ai/run-id.server";
 
-const MODEL = "google/gemini-3.5-flash";
+const MODEL = "openai/gpt-6-astra";
 const MAX_MESSAGES = 20;
 const MAX_REQUEST_BYTES = 32_000;
 
@@ -87,10 +87,19 @@ export const Route = createFileRoute("/api/legal-assistant")({
           getLovableAiGatewayRunId(request),
         );
         const result = streamText({
-          model: provider(MODEL),
+          model: provider.responses(MODEL),
           system: instructions,
           messages: await convertToModelMessages(validated.data),
           abortSignal: request.signal,
+          providerOptions: {
+            openai: {
+              forceReasoning: true,
+              reasoningEffort: "medium",
+              reasoningSummary: "auto",
+              store: false,
+              include: ["reasoning.encrypted_content"],
+            },
+          },
         });
         const response = result.toUIMessageStreamResponse({
           originalMessages: validated.data,
