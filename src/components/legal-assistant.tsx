@@ -3,6 +3,7 @@ import { DefaultChatTransport } from "ai";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { BotMessageSquare, ShieldCheck } from "lucide-react";
 import assistantAvatar from "@/assets/legal-assistant-avatar.png";
+import { cn } from "@/lib/utils";
 import {
   Conversation,
   ConversationContent,
