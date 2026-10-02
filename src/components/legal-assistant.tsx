@@ -3,6 +3,7 @@ import { DefaultChatTransport } from "ai";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { BotMessageSquare, ShieldCheck } from "lucide-react";
 import assistantAvatar from "@/assets/legal-assistant-avatar.png";
+import { cn } from "@/lib/utils";
 import {
   Conversation,
   ConversationContent,
@@ -64,22 +65,30 @@ export function LegalAssistant() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button
-          type="button"
-          size="icon"
-          aria-label="Abrir assistente jurídico virtual"
-          className="fixed bottom-20 right-5 z-40 h-14 w-14 rounded-full border border-gold bg-navy p-2 text-primary-foreground shadow-xl transition-transform hover:scale-105 hover:bg-wine md:bottom-24 md:right-6"
+      <div className={cn("group fixed bottom-20 right-5 z-40 md:bottom-24 md:right-6", open && "invisible")}>
+        <DialogTrigger asChild>
+          <Button
+            type="button"
+            size="icon"
+            aria-label="Abrir assistente jurídico virtual"
+            className="h-14 w-14 rounded-full border border-gold bg-navy p-2 text-primary-foreground shadow-xl transition-transform hover:scale-105 hover:bg-wine"
+          >
+            <img
+              src={assistantAvatar}
+              alt=""
+              width={816}
+              height={816}
+              className="h-10 w-10 object-contain"
+            />
+          </Button>
+        </DialogTrigger>
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute right-full top-1/2 mr-3 -translate-y-1/2 whitespace-nowrap rounded bg-graphite px-3 py-1.5 text-xs font-medium text-white opacity-0 shadow-lg transition-all duration-300 group-hover:opacity-100"
         >
-          <img
-            src={assistantAvatar}
-            alt=""
-            width={816}
-            height={816}
-            className="h-10 w-10 object-contain"
-          />
-        </Button>
-      </DialogTrigger>
+          Assistente Jurídico
+        </span>
+      </div>
 
       <DialogContent className="!inset-x-0 !top-0 !bottom-14 z-[70] flex !h-auto !w-auto !max-w-none !translate-x-0 !translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-gold/40 !bg-card p-0 shadow-2xl data-[state=closed]:zoom-out-100 data-[state=open]:zoom-in-100 sm:!left-auto sm:!right-6 sm:!top-auto sm:!bottom-40 sm:!h-[min(72dvh,42rem)] sm:!w-[26rem] sm:rounded-md">
         <header className="flex shrink-0 items-center gap-3 border-b border-border bg-navy px-4 py-3 pr-12 text-primary-foreground">
